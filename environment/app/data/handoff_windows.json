@@ -1,0 +1,80 @@
+[
+  {
+    "service": "auth",
+    "severity_scope": "all",
+    "start_ms": 1064,
+    "end_ms": 1150
+  },
+  {
+    "service": "auth",
+    "severity_scope": "all",
+    "start_ms": 2272,
+    "end_ms": 2336
+  },
+  {
+    "service": "billing",
+    "severity_scope": "all",
+    "start_ms": 349,
+    "end_ms": 411
+  },
+  {
+    "service": "billing",
+    "severity_scope": "all",
+    "start_ms": 1672,
+    "end_ms": 1758
+  },
+  {
+    "service": "search",
+    "severity_scope": "all",
+    "start_ms": 1105,
+    "end_ms": 1169
+  },
+  {
+    "service": "search",
+    "severity_scope": "all",
+    "start_ms": 1570,
+    "end_ms": 1632
+  },
+  {
+    "service": "gateway",
+    "severity_scope": "all",
+    "start_ms": 1155,
+    "end_ms": 1241
+  },
+  {
+    "service": "cache",
+    "severity_scope": "all",
+    "start_ms": 280,
+    "end_ms": 344
+  },
+  {
+    "service": "cache",
+    "severity_scope": "all",
+    "start_ms": 627,
+    "end_ms": 689
+  },
+  {
+    "service": "storage",
+    "severity_scope": "all",
+    "start_ms": 374,
+    "end_ms": 460
+  },
+  {
+    "service": "cdn",
+    "severity_scope": "all",
+    "start_ms": 310,
+    "end_ms": 374
+  },
+  {
+    "service": "cdn",
+    "severity_scope": "all",
+    "start_ms": 917,
+    "end_ms": 979
+  },
+  {
+    "service": "stream",
+    "severity_scope": "all",
+    "start_ms": 1251,
+    "end_ms": 1337
+  }
+]

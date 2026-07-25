@@ -1,0 +1,72 @@
+[
+  {
+    "service": "auth",
+    "start_ms": 507,
+    "end_ms": 544
+  },
+  {
+    "service": "auth",
+    "start_ms": 1307,
+    "end_ms": 1330
+  },
+  {
+    "service": "billing",
+    "start_ms": 157,
+    "end_ms": 200
+  },
+  {
+    "service": "billing",
+    "start_ms": 977,
+    "end_ms": 1014
+  },
+  {
+    "service": "search",
+    "start_ms": 207,
+    "end_ms": 230
+  },
+  {
+    "service": "search",
+    "start_ms": 1407,
+    "end_ms": 1450
+  },
+  {
+    "service": "gateway",
+    "start_ms": 607,
+    "end_ms": 644
+  },
+  {
+    "service": "gateway",
+    "start_ms": 1457,
+    "end_ms": 1480
+  },
+  {
+    "service": "cache",
+    "start_ms": 457,
+    "end_ms": 500
+  },
+  {
+    "service": "cache",
+    "start_ms": 1157,
+    "end_ms": 1194
+  },
+  {
+    "service": "storage",
+    "start_ms": 927,
+    "end_ms": 950
+  },
+  {
+    "service": "cdn",
+    "start_ms": 707,
+    "end_ms": 750
+  },
+  {
+    "service": "stream",
+    "start_ms": 647,
+    "end_ms": 684
+  },
+  {
+    "service": "auth",
+    "start_ms": 2620,
+    "end_ms": 2649
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "service": "auth",
+    "severity_scope": "critical",
+    "start_ms": 1506,
+    "end_ms": 1597
+  },
+  {
+    "service": "auth",
+    "severity_scope": "all",
+    "start_ms": 2177,
+    "end_ms": 2254
+  },
+  {
+    "service": "search",
+    "severity_scope": "all",
+    "start_ms": 369,
+    "end_ms": 460
+  },
+  {
+    "service": "search",
+    "severity_scope": "critical",
+    "start_ms": 988,
+    "end_ms": 1065
+  },
+  {
+    "service": "gateway",
+    "severity_scope": "critical",
+    "start_ms": 1537,
+    "end_ms": 1628
+  },
+  {
+    "service": "cache",
+    "severity_scope": "all",
+    "start_ms": 180,
+    "end_ms": 257
+  },
+  {
+    "service": "storage",
+    "severity_scope": "critical",
+    "start_ms": 1001,
+    "end_ms": 1092
+  },
+  {
+    "service": "cdn",
+    "severity_scope": "all",
+    "start_ms": 217,
+    "end_ms": 294
+  }
+]

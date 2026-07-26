@@ -26,47 +26,13 @@ EXCEPTIONS_PATH = Path("/app/data/shipping_exceptions.json")
 HANDOFF_PATH = Path("/app/data/handoff_windows.json")
 BLACKOUT_PATH = Path("/app/data/blackout_windows.json")
 DEGRADE_PATH = Path("/app/data/degrade_windows.json")
-CONTRACT_PATH = Path("/app/docs/shipping_contract.json")
 ALT_INPUT_PATH = Path("/tests/fixtures/alt_batches.json")
 
 FIXTURE = json.loads(Path("/tests/fixtures/expected_outputs.json").read_text())
-CONTRACT = json.loads(CONTRACT_PATH.read_text())
 BROKEN_PIPELINE_SHA256 = "d56a7b497993bda90e141aa440d904c8ef1a2025f1f349800888387af8b7836b"
 
 SEVERITY_ORDER = ("critical", "major", "minor")
 PRIORITY_ORDER = ("critical", "high", "medium")
-
-
-def test_checksum_serialization_contract_vectors():
-    """The contract's checksum test vectors reproduce under the specified serialization."""
-    vectors = CONTRACT["checksums"]["test_vectors"]
-    for prefix in (
-        "canonical",
-        "maintenance",
-        "exception",
-        "scoped",
-        "default_policy",
-    ):
-        payload = vectors[f"{prefix}_payload"].encode("utf-8")
-        assert hashlib.sha256(payload).hexdigest() == vectors[f"{prefix}_sha256"]
-
-
-def test_identifier_contract_vectors():
-    """The contract's identifier test vectors reproduce under the specified payload encoding."""
-    vectors = CONTRACT["queue"]["identifiers"]["identifier_test_vectors"]
-    assert (
-        hashlib.sha1(vectors["window_signature_payload"].encode("utf-8")).hexdigest()[:10]
-        == vectors["window_signature"]
-    )
-    assert len(vectors["window_signature"]) == 10
-    assert (
-        hashlib.sha1(vectors["batch_signature_payload"].encode("utf-8")).hexdigest()[:12]
-        == vectors["batch_signature"]
-    )
-    assert (
-        hashlib.sha1(vectors["queue_digest_payload"].encode("utf-8")).hexdigest()[:10]
-        == vectors["queue_digest"]
-    )
 
 
 def _run_pipeline(

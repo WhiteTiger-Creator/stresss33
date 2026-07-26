@@ -13,7 +13,6 @@ python3 -c "import json;print(json.dumps(json.load(open('/app/docs/shipping_cont
 # Locate the governing CAB entries. The log is long and mostly routine, so index the
 # ticketed decisions first, then read the ones that govern each stage.
 grep -n "LOG-" /app/batch/shipping_review_log.md | head -60 || true
-python3 -c "import json;print(json.dumps(json.load(open('/app/docs/shipping_contract.json'))['governing_entry_index'],indent=2))"
 
 # Confirm which entries are superseded rather than governing.
 grep -n "Superseded\|Revised" /app/batch/shipping_review_log.md | head -20 || true

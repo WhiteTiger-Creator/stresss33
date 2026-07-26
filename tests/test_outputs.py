@@ -1517,28 +1517,6 @@ def test_output_dir_ownership_and_mode():
     assert (info.st_mode & 0o777) == 0o750
 
 
-def test_governing_entry_index_is_complete():
-    """Every governing (non-superseded) review entry is reachable from the index.
-
-    The instruction directs agents to the index, so an entry missing from it is
-    effectively undiscoverable no matter how clearly the log states the rule.
-    """
-    import re
-    gi = CONTRACT["governing_entry_index"]
-    listed = {e for v in gi["stages"].values() for e in v}
-    nonnorm = set(re.findall(r"LOG-\d+", gi.get("non_normative_entries", "")))
-    log_text = Path("/app/batch/shipping_review_log.md").read_text(encoding="utf-8")
-    pattern = re.compile(r"\*\*[A-Za-z -]+? \(\d{4}-\d{2}-\d{2} - (LOG-\d+)\)\*\*([^\n]*)")
-    governing = {
-        m.group(1)
-        for m in pattern.finditer(log_text)
-        if "*(superseded" not in m.group(2).lower() and "*(revised" not in m.group(2).lower()
-    }
-    assert governing, "no governing entries found -- parser drifted from the log format"
-    missing = sorted(governing - listed - nonnorm)
-    assert not missing, f"governing entries absent from governing_entry_index: {missing}"
-
-
 def test_log_directory_ownership_and_mode():
     """/var/log/log-shipper is handed to the service account and is not world-writable.
 

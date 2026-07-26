@@ -12,398 +12,398 @@ Routine entries are context only. LOG-ticketed proposal and decision quotes embe
 
 ### Review entry 0001 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0001. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 1s over 20 batches (ticket LOG-8000); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0002 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0002. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in us-west expired 4 stale batches and left 27 governing ones (ticket LOG-8001); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0003 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0003. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Marta confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8002); 34 batches were written to the retry queue.
 
 ### Review entry 0004 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0004. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8003); severity counts held across the ap-south lanes.
 
 ### Review entry 0005 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0005. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 152ms residual into the next span and decayed the prior idle to zero (ticket LOG-8004); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0006 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0006. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 16 degrade segments during the ap-northeast rollout (ticket LOG-8005); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0007 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0007. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 19 mixed-type values from the us-east feed (ticket LOG-8006) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0008 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0008. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 69 unplanned batches in us-west (ticket LOG-8007); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0009 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0009. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 33s over 76 batches (ticket LOG-8008); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0010 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0010. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-south expired 28 stale batches and left 83 governing ones (ticket LOG-8009); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0011 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0011. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Priya confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8010); 90 batches were written to the retry queue.
 
 ### Review entry 0012 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0012. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8011); severity counts held across the ap-northeast lanes.
 > **Rollout draft proposal (2026-02-09 - LOG-1903)** Dana: service labels are stable upstream; preserve their exact casing and do not fold aliases together *(Superseded — reversed in the 2026-05 change review; see the matching decision entry.)*
 
 ### Review entry 0013 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0013. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 256ms residual into the next span and decayed the prior idle to zero (ticket LOG-8012); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0014 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0014. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 40 degrade segments during the us-west rollout (ticket LOG-8013); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0015 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0015. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 43 mixed-type values from the eu-central feed (ticket LOG-8014) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0016 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0016. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 125 unplanned batches in ap-south (ticket LOG-8015); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0017 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0017. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 65s over 132 batches (ticket LOG-8016); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0018 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0018. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-northeast expired 52 stale batches and left 139 governing ones (ticket LOG-8017); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0019 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0019. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Ilya confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8018); 146 batches were written to the retry queue.
 
 ### Review entry 0020 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0020. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8019); severity counts held across the us-west lanes.
 
 ### Review entry 0021 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0021. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 360ms residual into the next span and decayed the prior idle to zero (ticket LOG-8020); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0022 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0022. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 4 degrade segments during the ap-south rollout (ticket LOG-8021); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0023 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0023. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 7 mixed-type values from the sa-east feed (ticket LOG-8022) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0024 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0024. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 181 unplanned batches in ap-northeast (ticket LOG-8023); per-severity intervals merged without changing downstream scoring.
 > **Rollout draft proposal (2026-02-11 - LOG-1907)** Dana: rows whose start_ms or end_ms will not parse as an integer should be dropped from the compile entirely *(Superseded — reversed in the 2026-05 change review; see the matching decision entry.)*
 
 ### Review entry 0025 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0025. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 7s over 188 batches (ticket LOG-8024); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0026 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0026. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in us-west expired 16 stale batches and left 195 governing ones (ticket LOG-8025); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0027 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0027. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Nadia confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8026); 202 batches were written to the retry queue.
 
 ### Review entry 0028 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0028. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8027); severity counts held across the ap-south lanes.
 
 ### Review entry 0029 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0029. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 464ms residual into the next span and decayed the prior idle to zero (ticket LOG-8028); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0030 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0030. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 28 degrade segments during the ap-northeast rollout (ticket LOG-8029); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0031 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0031. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 31 mixed-type values from the us-east feed (ticket LOG-8030) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0032 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0032. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 237 unplanned batches in us-west (ticket LOG-8031); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0033 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0033. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 39s over 244 batches (ticket LOG-8032); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0034 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0034. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-south expired 40 stale batches and left 251 governing ones (ticket LOG-8033); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0035 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0035. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Rao confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8034); 258 batches were written to the retry queue.
 
 ### Review entry 0036 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0036. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8035); severity counts held across the ap-northeast lanes.
 > **Rollout draft proposal (2026-02-13 - LOG-1911)** Tomas: treat any non-empty `planned` string as true, including `false` and `no` *(Superseded — reversed in the 2026-05 change review; see the matching decision entry.)*
 
 ### Review entry 0037 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0037. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 568ms residual into the next span and decayed the prior idle to zero (ticket LOG-8036); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0038 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0038. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 52 degrade segments during the us-west rollout (ticket LOG-8037); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0039 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0039. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 55 mixed-type values from the eu-central feed (ticket LOG-8038) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0040 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0040. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 293 unplanned batches in ap-south (ticket LOG-8039); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0041 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0041. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 71s over 300 batches (ticket LOG-8040); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0042 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0042. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-northeast expired 4 stale batches and left 307 governing ones (ticket LOG-8041); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0043 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0043. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Dana confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8042); 314 batches were written to the retry queue.
 
 ### Review entry 0044 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0044. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8043); severity counts held across the us-west lanes.
 
 ### Review entry 0045 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0045. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 672ms residual into the next span and decayed the prior idle to zero (ticket LOG-8044); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0046 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0046. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 16 degrade segments during the ap-south rollout (ticket LOG-8045); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0047 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0047. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 19 mixed-type values from the sa-east feed (ticket LOG-8046) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0048 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0048. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 349 unplanned batches in ap-northeast (ticket LOG-8047); per-severity intervals merged without changing downstream scoring.
 > **Rollout draft proposal (2026-02-16 - LOG-1914)** Tomas: when an batch_id repeats, keep the first row encountered and discard the rest *(Superseded — reversed in the 2026-05 change review; see the matching decision entry.)*
 
 ### Review entry 0049 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0049. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 13s over 356 batches (ticket LOG-8048); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0050 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0050. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in us-west expired 28 stale batches and left 363 governing ones (ticket LOG-8049); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0051 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0051. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Tomas confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8050); 370 batches were written to the retry queue.
 
 ### Review entry 0052 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0052. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8051); severity counts held across the ap-south lanes.
 
 ### Review entry 0053 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0053. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 776ms residual into the next span and decayed the prior idle to zero (ticket LOG-8052); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0054 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0054. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 40 degrade segments during the ap-northeast rollout (ticket LOG-8053); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0055 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0055. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 43 mixed-type values from the us-east feed (ticket LOG-8054) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0056 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0056. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 405 unplanned batches in us-west (ticket LOG-8055); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0057 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0057. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 45s over 412 batches (ticket LOG-8056); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0058 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0058. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-south expired 52 stale batches and left 419 governing ones (ticket LOG-8057); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0059 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0059. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Marta confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8058); 26 batches were written to the retry queue.
 
 ### Review entry 0060 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0060. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8059); severity counts held across the ap-northeast lanes.
 > **Rollout draft proposal (2026-02-18 - LOG-1917)** Dana: treat all intervals as closed [start_ms, end_ms], so endpoint contact counts as overlap *(Superseded — reversed in the 2026-05 change review; see the matching decision entry.)*
 
 ### Review entry 0061 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0061. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 880ms residual into the next span and decayed the prior idle to zero (ticket LOG-8060); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0062 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0062. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 4 degrade segments during the us-west rollout (ticket LOG-8061); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0063 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0063. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 7 mixed-type values from the eu-central feed (ticket LOG-8062) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0064 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0064. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 61 unplanned batches in ap-south (ticket LOG-8063); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0065 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0065. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 77s over 68 batches (ticket LOG-8064); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0066 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0066. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-northeast expired 16 stale batches and left 75 governing ones (ticket LOG-8065); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0067 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0067. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Priya confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8066); 82 batches were written to the retry queue.
 
 ### Review entry 0068 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0068. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8067); severity counts held across the us-west lanes.
 
 ### Review entry 0069 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0069. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 984ms residual into the next span and decayed the prior idle to zero (ticket LOG-8068); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0070 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0070. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 28 degrade segments during the ap-south rollout (ticket LOG-8069); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0071 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0071. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 31 mixed-type values from the sa-east feed (ticket LOG-8070) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0072 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0072. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 117 unplanned batches in ap-northeast (ticket LOG-8071); per-severity intervals merged without changing downstream scoring.
 > **Rollout draft proposal (2026-02-20 - LOG-1921)** Tomas: when suppress and boost spans intersect, the intersection stays with suppress — suppression is safety-critical *(Superseded — reversed in the 2026-05 change review; see the matching decision entry.)*
 
 > **Rollout draft proposal (2026-02-21 - LOG-1922)** Dana: for scoped attenuation (handoff, blackout, degrade), clip the all-scope compacted intervals and the matching-severity compacted intervals to the window separately, add the two clipped durations to get overlap_ms, and set segment_count to the total count of clips across both scopes — do not merge the two scopes together *(Superseded — reversed in the 2026-05 change review; see the matching decision entry.)*
 
 ### Review entry 0073 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0073. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 19s over 124 batches (ticket LOG-8072); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0074 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0074. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in us-west expired 40 stale batches and left 131 governing ones (ticket LOG-8073); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0075 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0075. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Ilya confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8074); 138 batches were written to the retry queue.
 
 ### Review entry 0076 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0076. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8075); severity counts held across the ap-south lanes.
 
 ### Review entry 0077 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0077. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1088ms residual into the next span and decayed the prior idle to zero (ticket LOG-8076); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0078 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0078. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 52 degrade segments during the ap-northeast rollout (ticket LOG-8077); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0079 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0079. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 55 mixed-type values from the us-east feed (ticket LOG-8078) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0080 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0080. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 173 unplanned batches in us-west (ticket LOG-8079); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0081 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0081. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 51s over 180 batches (ticket LOG-8080); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0082 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0082. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-south expired 4 stale batches and left 187 governing ones (ticket LOG-8081); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0083 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0083. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Nadia confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8082); 194 batches were written to the retry queue.
 
 ### Review entry 0084 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0084. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8083); severity counts held across the ap-northeast lanes.
 > **Rollout draft proposal (2026-02-23 - LOG-1924)** Dana: subtract the full handoff, blackout and degrade overlaps from billable time with no divisor *(Superseded — reversed in the 2026-05 change review; see the matching decision entry.)*
 
 > **Rollout draft proposal (2026-02-24 - LOG-1925)** Tomas: exception and attenuation unit counts should all round the same way — floor-divide every overlap (suppress, boost, handoff, blackout, degrade) by its unit size so the conversions stay consistent *(Superseded — reversed in the 2026-05 change review; see the matching decision entry.)*
 
 ### Review entry 0085 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0085. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 1192ms residual into the next span and decayed the prior idle to zero (ticket LOG-8084); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0086 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0086. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 16 degrade segments during the us-west rollout (ticket LOG-8085); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0087 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0087. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 19 mixed-type values from the eu-central feed (ticket LOG-8086) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0088 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0088. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 229 unplanned batches in ap-south (ticket LOG-8087); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0089 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0089. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 83s over 236 batches (ticket LOG-8088); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0090 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0090. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-northeast expired 28 stale batches and left 243 governing ones (ticket LOG-8089); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0091 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0091. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Rao confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8090); 250 batches were written to the retry queue.
 
 ### Review entry 0092 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0092. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8091); severity counts held across the us-west lanes.
 
 ### Review entry 0093 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0093. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1296ms residual into the next span and decayed the prior idle to zero (ticket LOG-8092); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0094 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0094. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 40 degrade segments during the ap-south rollout (ticket LOG-8093); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0095 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0095. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 43 mixed-type values from the sa-east feed (ticket LOG-8094) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0096 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0096. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 285 unplanned batches in ap-northeast (ticket LOG-8095); per-severity intervals merged without changing downstream scoring.
 > **Rollout draft proposal (2026-02-25 - LOG-1928)** Tomas: carry responder debt forward without any cap; long weekends should accumulate naturally *(Superseded — reversed in the 2026-05 change review; see the matching decision entry.)*
 
 > **Rollout draft proposal (2026-02-25 - LOG-1926)** Dana: responder-debt bookkeeping between a service's windows — decay carried debt by half the idle gap (`debt_in_ms = max(previous.debt_out_ms - idle_gap_ms//2, 0)`), credit `debt_adjusted_dispatchable_ms` with `debt_in_ms//4`, and on carry-out add `handoff_segment_count*15 + blackout_segment_count*20 + degrade_segment_count*10` with no separate maintenance-span credit *(Superseded — reversed in the 2026-05 change review; see the matching decision entry.)*
@@ -416,112 +416,112 @@ Historical CSV escalation exports remain archived and non-authoritative for the 
 
 ### Review entry 0097 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0097. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 25s over 292 batches (ticket LOG-8096); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0098 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0098. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in us-west expired 52 stale batches and left 299 governing ones (ticket LOG-8097); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0099 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0099. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Dana confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8098); 306 batches were written to the retry queue.
 
 ### Review entry 0100 — inventory lane
 > **Change-review decision (2026-04-02 - LOG-2102)** Dana: attenuation divides overlaps as handoff // 3, blackout // 4, degrade // 5. *(Revised — see the 2026-05 change review.)*
 Shift lead logged routine rollout observation for inventory (east) during review window 0100. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8099); severity counts held across the ap-south lanes.
 
 ### Review entry 0101 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0101. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 1400ms residual into the next span and decayed the prior idle to zero (ticket LOG-8100); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0102 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0102. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 4 degrade segments during the ap-northeast rollout (ticket LOG-8101); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0103 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0103. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 7 mixed-type values from the us-east feed (ticket LOG-8102) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0104 — auth lane
 > **Change-review decision (2026-04-06 - LOG-2106)** Dana: responder debt decays by half the idle gap, caps at 2200, and credits segments at 15/20/10 for handoff/blackout/degrade. *(Revised — see the 2026-05 change review.)*
 Shift lead logged routine rollout observation for auth (east) during review window 0104. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 341 unplanned batches in us-west (ticket LOG-8103); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0105 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0105. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 57s over 348 batches (ticket LOG-8104); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0106 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0106. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-south expired 16 stale batches and left 355 governing ones (ticket LOG-8105); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0107 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0107. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Tomas confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8106); 362 batches were written to the retry queue.
 
 ### Review entry 0108 — inventory lane
 > **Change-review decision (2026-04-10 - LOG-2110)** Tomas: every unit conversion rounds down, including suppress units. *(Revised — see the 2026-05 change review.)*
 Shift lead logged routine rollout observation for inventory (east) during review window 0108. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8107); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0109 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0109. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1504ms residual into the next span and decayed the prior idle to zero (ticket LOG-8108); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0110 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0110. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 28 degrade segments during the us-west rollout (ticket LOG-8109); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0111 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0111. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 31 mixed-type values from the eu-central feed (ticket LOG-8110) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0112 — auth lane
 > **Change-review decision (2026-04-14 - LOG-2114)** Tomas: queue admission compares debt-adjusted dispatchability against effective_queue_min_ms alone; no further threshold escalation applies. *(Revised — see the 2026-05 change review.)*
 Shift lead logged routine rollout observation for auth (east) during review window 0112. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 397 unplanned batches in ap-south (ticket LOG-8111); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0113 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0113. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 89s over 404 batches (ticket LOG-8112); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0114 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0114. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-northeast expired 40 stale batches and left 411 governing ones (ticket LOG-8113); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0115 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0115. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Marta confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8114); 418 batches were written to the retry queue.
 
 ### Review entry 0116 — inventory lane
 > **Change-review decision (2026-04-18 - LOG-2118)** Dana: batch windows merge only when the next batch starts at or before the current window's end, with no grace interval. *(Revised — see the 2026-05 change review.)*
 Shift lead logged routine rollout observation for inventory (east) during review window 0116. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8115); severity counts held across the us-west lanes.
 
 ### Review entry 0117 — edge lane
 > **Change-review decision (2026-04-20 - LOG-2127)** Dana: duplicate batchs are grouped by `batch_id` and the kept row is chosen by highest severity rank first, then max end_ms, then max start_ms; the planned flag does not enter the tie-break. *(Revised — see the 2026-05 change review.)*
 > **Change-review decision (2026-04-22 - LOG-2131)** Tomas: scoped handoff/blackout/degrade overlap_ms is the SUM of the (service, all) clipped duration and the (service, max_severity) clipped duration, and segment_count is the total count of clips across both scopes; the two scopes are not unioned. *(Revised — see the 2026-05 change review.)*
 > **Change-review decision (2026-04-24 - LOG-2133)** Tomas: where a suppress span and a boost span intersect, the shared duration counts toward suppression_overlap_ms and is excluded from boost_overlap_ms; suppress wins the intersection. *(Revised — see the 2026-05 change review.)*
 Shift lead logged routine rollout observation for edge (west) during review window 0117. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 1608ms residual into the next span and decayed the prior idle to zero (ticket LOG-8116); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0118 — notifications lane
 > **Change-review decision (2026-04-26 - LOG-2135)** Dana: pressure divisors — `handoff_pressure_score` = (all_probe_ms // 25) + (severity_probe_ms // 15) + handoff_segment_count; `blackout_pressure_score` uses // 30 and // 20; `degrade_pressure_score` uses // 28 and // 18. *(Revised — see the 2026-05 change review.)*
 > **Change-review decision (2026-04-28 - LOG-2137)** Tomas: `escalation_score` = (debt_adjusted_dispatchable_ms // 60) + batch_count*2 + critical_batch_count*3 + severity_weight[max_severity]; the exception-balance, handoff, blackout and debt pressure terms are not part of it. *(Revised — see the 2026-05 change review.)*
 > **Change-review decision (2026-04-30 - LOG-2139)** Dana: interval semantics are closed [start_ms, end_ms]; endpoint-only contact contributes 1ms of overlap. *(Revised — see the 2026-05 change review.)*
 Shift lead logged routine rollout observation for notifications (north) during review window 0118. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 52 degrade segments during the ap-south rollout (ticket LOG-8117); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0119 — ledger lane
 > **Change-review decision (2026-05-01 - LOG-2141)** Tomas: `planned` coercion treats any non-empty string as true, including `false` and `no`, and treats a numeric planned value of 2 as true. *(Revised — see the 2026-05 change review.)*
 > **Change-review decision (2026-05-01 - LOG-2143)** Dana: `debt_adjusted_dispatchable_ms` = dispatchable_billable_duration_ms + (debt_in_ms // 4). *(Revised — see the 2026-05 change review.)*
 Shift lead logged routine rollout observation for ledger (central) during review window 0119. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 55 mixed-type values from the sa-east feed (ticket LOG-8118) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0120 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0120. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 53 unplanned batches in ap-northeast (ticket LOG-8119); per-severity intervals merged without changing downstream scoring.
 > **Change-review decision (2026-05-02 - LOG-2201)** Ilya: canonical service labels are trimmed and lowercased, then folded through the alias table: `authentication` -> `auth`, `payments` -> `billing`, `search-api` -> `search`. This supersedes LOG-1903.
 
 ### Review entry 0812 — debt bench
@@ -550,1587 +550,1587 @@ Historical CSV escalation exports remain archived and non-authoritative for the 
 
 ### Review entry 0121 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0121. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 31s over 60 batches (ticket LOG-8120); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0122 — search lane
 > **Change-review decision (2026-04-16 - LOG-2116)** Dana: final queue ordering is priority tier, then dispatchable_billable_duration_ms descending, then service ascending — a short, coarse key that avoids the pressure-score comparisons. *(Revised — see the 2026-05 change review.)*
 Shift lead logged routine rollout observation for search (north) during review window 0122. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in us-west expired 4 stale batches and left 67 governing ones (ticket LOG-8121); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0123 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0123. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Priya confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8122); 74 batches were written to the retry queue.
 
 ### Review entry 0124 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0124. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8123); severity counts held across the ap-south lanes.
 
 ### Review entry 0125 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0125. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1712ms residual into the next span and decayed the prior idle to zero (ticket LOG-8124); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0126 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0126. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 16 degrade segments during the ap-northeast rollout (ticket LOG-8125); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0127 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0127. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 19 mixed-type values from the us-east feed (ticket LOG-8126) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0128 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0128. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 109 unplanned batches in us-west (ticket LOG-8127); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0129 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0129. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 63s over 116 batches (ticket LOG-8128); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0130 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0130. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-south expired 28 stale batches and left 123 governing ones (ticket LOG-8129); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0131 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0131. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Ilya confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8130); 130 batches were written to the retry queue.
 
 ### Review entry 0132 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0132. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8131); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0133 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0133. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 1816ms residual into the next span and decayed the prior idle to zero (ticket LOG-8132); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0134 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0134. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 40 degrade segments during the us-west rollout (ticket LOG-8133); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0135 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0135. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 43 mixed-type values from the eu-central feed (ticket LOG-8134) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0136 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0136. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 165 unplanned batches in ap-south (ticket LOG-8135); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0137 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0137. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 5s over 172 batches (ticket LOG-8136); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 > **Change-review decision (2026-05-02 - LOG-2202)** Ilya: allowed severities are critical, major, minor; anything else (or a missing value) becomes `minor`. Severity rank for comparisons is critical > major > minor.
 
 ### Review entry 0138 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0138. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-northeast expired 52 stale batches and left 179 governing ones (ticket LOG-8137); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0139 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0139. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Nadia confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8138); 186 batches were written to the retry queue.
 
 ### Review entry 0140 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0140. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8139); severity counts held across the us-west lanes.
 
 ### Review entry 0141 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0141. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1920ms residual into the next span and decayed the prior idle to zero (ticket LOG-8140); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0142 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0142. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 4 degrade segments during the ap-south rollout (ticket LOG-8141); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0143 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0143. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 7 mixed-type values from the sa-east feed (ticket LOG-8142) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0144 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0144. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 221 unplanned batches in ap-northeast (ticket LOG-8143); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0145 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0145. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 37s over 228 batches (ticket LOG-8144); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0146 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0146. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in us-west expired 16 stale batches and left 235 governing ones (ticket LOG-8145); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0147 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0147. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Rao confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8146); 242 batches were written to the retry queue.
 
 ### Review entry 0148 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0148. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8147); severity counts held across the ap-south lanes.
 
 ### Review entry 0149 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0149. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 2024ms residual into the next span and decayed the prior idle to zero (ticket LOG-8148); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0150 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0150. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 28 degrade segments during the ap-northeast rollout (ticket LOG-8149); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0151 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0151. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 31 mixed-type values from the us-east feed (ticket LOG-8150) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0152 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0152. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 277 unplanned batches in us-west (ticket LOG-8151); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0153 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0153. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 69s over 284 batches (ticket LOG-8152); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0154 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0154. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-south expired 40 stale batches and left 291 governing ones (ticket LOG-8153); the pruned set reconciled against the sink with no dangling offsets.
 > **Change-review decision (2026-05-03 - LOG-2204)** Priya: every millisecond field is coerced with int(str(value).strip()) with fallback 0. Unparseable rows are KEPT with the fallback value — they are not dropped. This supersedes LOG-1907.
 
 ### Review entry 0155 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0155. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Dana confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8154); 298 batches were written to the retry queue.
 
 ### Review entry 0156 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0156. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8155); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0157 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0157. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 2128ms residual into the next span and decayed the prior idle to zero (ticket LOG-8156); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0158 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0158. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 52 degrade segments during the us-west rollout (ticket LOG-8157); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0159 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0159. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 55 mixed-type values from the eu-central feed (ticket LOG-8158) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0160 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0160. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 333 unplanned batches in ap-south (ticket LOG-8159); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0161 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0161. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 11s over 340 batches (ticket LOG-8160); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0162 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0162. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-northeast expired 4 stale batches and left 347 governing ones (ticket LOG-8161); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0163 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0163. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Tomas confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8162); 354 batches were written to the retry queue.
 
 ### Review entry 0164 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0164. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8163); severity counts held across the us-west lanes.
 
 ### Review entry 0165 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0165. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 2232ms residual into the next span and decayed the prior idle to zero (ticket LOG-8164); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0166 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0166. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 16 degrade segments during the ap-south rollout (ticket LOG-8165); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0167 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0167. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 19 mixed-type values from the sa-east feed (ticket LOG-8166) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0168 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0168. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 389 unplanned batches in ap-northeast (ticket LOG-8167); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0169 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0169. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 43s over 396 batches (ticket LOG-8168); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0170 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0170. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in us-west expired 28 stale batches and left 403 governing ones (ticket LOG-8169); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0171 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0171. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Marta confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8170); 410 batches were written to the retry queue.
 > **Change-review decision (2026-05-03 - LOG-2205)** Priya: `planned` coercion: booleans — preserve the boolean value; strings — strip and lowercase; true, 1, and yes become true; every other string becomes false; other types — use Python bool(value): null and numeric 0 become false; nonzero numbers and other truthy values become true. For the summary, count canonical deduplicated rows whose normalized planned value is true; for example planned=2 is excluded and planned=null is not. This supersedes LOG-1911.
 
 ### Review entry 0172 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0172. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8171); severity counts held across the ap-south lanes.
 
 ### Review entry 0173 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0173. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 2336ms residual into the next span and decayed the prior idle to zero (ticket LOG-8172); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0174 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0174. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 40 degrade segments during the ap-northeast rollout (ticket LOG-8173); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0175 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0175. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 43 mixed-type values from the us-east feed (ticket LOG-8174) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0176 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0176. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 45 unplanned batches in us-west (ticket LOG-8175); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0177 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0177. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 75s over 52 batches (ticket LOG-8176); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0178 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0178. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-south expired 52 stale batches and left 59 governing ones (ticket LOG-8177); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0179 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0179. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Priya confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8178); 66 batches were written to the retry queue.
 
 ### Review entry 0180 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0180. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8179); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0181 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0181. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 2440ms residual into the next span and decayed the prior idle to zero (ticket LOG-8180); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0182 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0182. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 4 degrade segments during the us-west rollout (ticket LOG-8181); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0183 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0183. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 7 mixed-type values from the eu-central feed (ticket LOG-8182) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0184 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0184. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 101 unplanned batches in ap-south (ticket LOG-8183); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0185 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0185. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 17s over 108 batches (ticket LOG-8184); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0186 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0186. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-northeast expired 16 stale batches and left 115 governing ones (ticket LOG-8185); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0187 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0187. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Ilya confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8186); 122 batches were written to the retry queue.
 
 ### Review entry 0188 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0188. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8187); severity counts held across the us-west lanes.
 > **Change-review decision (2026-05-04 - LOG-2207)** Marta: duplicate batchs are grouped by `batch_id` and one row is kept per group. Tie-break chain, in order: max end_ms; then max severity rank; then prefer planned == false; then max start_ms; then max service lexicographically. This supersedes LOG-1914.
 
 ### Review entry 0189 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0189. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 144ms residual into the next span and decayed the prior idle to zero (ticket LOG-8188); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0190 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0190. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 28 degrade segments during the ap-south rollout (ticket LOG-8189); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0191 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0191. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 31 mixed-type values from the sa-east feed (ticket LOG-8190) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0192 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0192. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 157 unplanned batches in ap-northeast (ticket LOG-8191); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0193 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0193. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 49s over 164 batches (ticket LOG-8192); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0194 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0194. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in us-west expired 40 stale batches and left 171 governing ones (ticket LOG-8193); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0195 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0195. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Nadia confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8194); 178 batches were written to the retry queue.
 
 ### Review entry 0196 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0196. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8195); severity counts held across the ap-south lanes.
 
 ### Review entry 0197 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0197. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 248ms residual into the next span and decayed the prior idle to zero (ticket LOG-8196); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0198 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0198. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 52 degrade segments during the ap-northeast rollout (ticket LOG-8197); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0199 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0199. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 55 mixed-type values from the us-east feed (ticket LOG-8198) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0200 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0200. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 213 unplanned batches in us-west (ticket LOG-8199); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0201 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0201. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 81s over 220 batches (ticket LOG-8200); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0202 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0202. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-south expired 4 stale batches and left 227 governing ones (ticket LOG-8201); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0203 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0203. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Rao confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8202); 234 batches were written to the retry queue.
 
 ### Review entry 0204 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0204. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8203); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0205 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0205. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 352ms residual into the next span and decayed the prior idle to zero (ticket LOG-8204); the us-east handoff segments reconciled cleanly.
 > **Change-review decision (2026-05-04 - LOG-2208)** Marta: interval semantics: all source and overlap intervals are half-open [start_ms,end_ms); rows with end_ms <= start_ms are discarded. Overlap is max(0, min(end_a, end_b) - max(start_a, start_b)); endpoint-only contact contributes 0ms. This supersedes LOG-1917.
 
 ### Review entry 0206 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0206. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 16 degrade segments during the us-west rollout (ticket LOG-8205); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0207 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0207. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 19 mixed-type values from the eu-central feed (ticket LOG-8206) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0208 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0208. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 269 unplanned batches in ap-south (ticket LOG-8207); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0209 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0209. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 23s over 276 batches (ticket LOG-8208); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0210 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0210. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-northeast expired 28 stale batches and left 283 governing ones (ticket LOG-8209); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0211 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0211. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Dana confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8210); 290 batches were written to the retry queue.
 
 ### Review entry 0212 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0212. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8211); severity counts held across the us-west lanes.
 
 ### Review entry 0213 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0213. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 456ms residual into the next span and decayed the prior idle to zero (ticket LOG-8212); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0214 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0214. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 40 degrade segments during the ap-south rollout (ticket LOG-8213); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0215 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0215. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 43 mixed-type values from the sa-east feed (ticket LOG-8214) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0216 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0216. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 325 unplanned batches in ap-northeast (ticket LOG-8215); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0217 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0217. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 55s over 332 batches (ticket LOG-8216); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0218 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0218. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in us-west expired 52 stale batches and left 339 governing ones (ticket LOG-8217); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0219 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0219. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Tomas confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8218); 346 batches were written to the retry queue.
 
 ### Review entry 0220 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0220. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8219); severity counts held across the ap-south lanes.
 
 ### Review entry 0221 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0221. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 560ms residual into the next span and decayed the prior idle to zero (ticket LOG-8220); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0222 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0222. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 4 degrade segments during the ap-northeast rollout (ticket LOG-8221); touching intervals compacted and the queue ordering was unchanged.
 > **Change-review decision (2026-05-05 - LOG-2210)** Ilya: window construction uses unplanned batchs only; stitch rule: merge if next.start_ms <= current.end_ms + 30 — the 30ms grace interval is final and revises LOG-2118. Maintenance compaction: per service, merge touching intervals if next.start_ms <= current.end_ms. Exceptions compaction: per (service, action), merge touching intervals if next.start_ms <= current.end_ms. Scoped compaction: per (service, severity_scope), merge touching intervals if next.start_ms <= current.end_ms.
 
 ### Review entry 0223 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0223. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 7 mixed-type values from the us-east feed (ticket LOG-8222) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0224 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0224. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 381 unplanned batches in us-west (ticket LOG-8223); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0225 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0225. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 87s over 388 batches (ticket LOG-8224); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0226 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0226. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-south expired 16 stale batches and left 395 governing ones (ticket LOG-8225); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0227 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0227. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Marta confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8226); 402 batches were written to the retry queue.
 
 ### Review entry 0228 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0228. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8227); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0229 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0229. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 664ms residual into the next span and decayed the prior idle to zero (ticket LOG-8228); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0230 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0230. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 28 degrade segments during the us-west rollout (ticket LOG-8229); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0231 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0231. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 31 mixed-type values from the eu-central feed (ticket LOG-8230) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0232 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0232. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 37 unplanned batches in ap-south (ticket LOG-8231); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0233 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0233. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 29s over 44 batches (ticket LOG-8232); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0234 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0234. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-northeast expired 40 stale batches and left 51 governing ones (ticket LOG-8233); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0235 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0235. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Priya confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8234); 58 batches were written to the retry queue.
 
 ### Review entry 0236 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0236. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8235); severity counts held across the us-west lanes.
 
 ### Review entry 0237 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0237. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 768ms residual into the next span and decayed the prior idle to zero (ticket LOG-8236); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0238 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0238. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 52 degrade segments during the ap-south rollout (ticket LOG-8237); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0239 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0239. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 55 mixed-type values from the sa-east feed (ticket LOG-8238) and held them out of window construction while keeping them in the canonical count.
 > **Change-review decision (2026-05-05 - LOG-2211)** Ilya: routing domains apply in the fixed order maintenance -> exceptions -> handoff -> blackout -> degrade. Exception actions are limited to suppress and boost; severity scopes are all, major, critical.
 
 ### Review entry 0240 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0240. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 93 unplanned batches in ap-northeast (ticket LOG-8239); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0241 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0241. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 61s over 100 batches (ticket LOG-8240); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0242 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0242. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in us-west expired 4 stale batches and left 107 governing ones (ticket LOG-8241); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0243 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0243. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Ilya confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8242); 114 batches were written to the retry queue.
 
 ### Review entry 0244 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0244. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8243); severity counts held across the ap-south lanes.
 
 ### Review entry 0245 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0245. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 872ms residual into the next span and decayed the prior idle to zero (ticket LOG-8244); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0246 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0246. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 16 degrade segments during the ap-northeast rollout (ticket LOG-8245); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0247 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0247. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 19 mixed-type values from the us-east feed (ticket LOG-8246) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0248 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0248. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 149 unplanned batches in us-west (ticket LOG-8247); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0249 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0249. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 3s over 156 batches (ticket LOG-8248); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0250 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0250. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-south expired 28 stale batches and left 163 governing ones (ticket LOG-8249); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0251 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0251. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Nadia confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8250); 170 batches were written to the retry queue.
 
 ### Review entry 0252 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0252. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8251); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0253 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0253. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 976ms residual into the next span and decayed the prior idle to zero (ticket LOG-8252); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0254 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0254. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 40 degrade segments during the us-west rollout (ticket LOG-8253); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0255 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0255. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 43 mixed-type values from the eu-central feed (ticket LOG-8254) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0256 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0256. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 205 unplanned batches in ap-south (ticket LOG-8255); per-severity intervals merged without changing downstream scoring.
 > **Change-review decision (2026-05-06 - LOG-2213)** Nadia: scoped overlap for handoff, blackout and degrade: for handoff, blackout, and degrade, select compacted intervals for (service, all) and (service, window.max_severity), clip both sets to the batch window, discard zero-duration clips, union and compact the combined clips using the touching merge rule, then set overlap_ms to the union duration and segment_count to the number of combined union segments. Thus an all-scope clip ending at 240 and a matching-severity clip starting at 240 form one segment, not two.
 
 ### Review entry 0257 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0257. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 35s over 212 batches (ticket LOG-8256); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0258 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0258. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-northeast expired 52 stale batches and left 219 governing ones (ticket LOG-8257); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0259 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0259. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Rao confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8258); 226 batches were written to the retry queue.
 
 ### Review entry 0260 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0260. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8259); severity counts held across the us-west lanes.
 
 ### Review entry 0261 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0261. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 1080ms residual into the next span and decayed the prior idle to zero (ticket LOG-8260); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0262 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0262. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 4 degrade segments during the ap-south rollout (ticket LOG-8261); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0263 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0263. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 7 mixed-type values from the sa-east feed (ticket LOG-8262) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0264 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0264. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 261 unplanned batches in ap-northeast (ticket LOG-8263); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0265 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0265. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 67s over 268 batches (ticket LOG-8264); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0266 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0266. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in us-west expired 16 stale batches and left 275 governing ones (ticket LOG-8265); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0267 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0267. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Dana confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8266); 282 batches were written to the retry queue.
 
 ### Review entry 0268 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0268. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8267); severity counts held across the ap-south lanes.
 
 ### Review entry 0269 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0269. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1184ms residual into the next span and decayed the prior idle to zero (ticket LOG-8268); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0270 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0270. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 28 degrade segments during the ap-northeast rollout (ticket LOG-8269); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0271 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0271. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 31 mixed-type values from the us-east feed (ticket LOG-8270) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0272 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0272. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 317 unplanned batches in us-west (ticket LOG-8271); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0273 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0273. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 9s over 324 batches (ticket LOG-8272); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 > **Change-review decision (2026-05-06 - LOG-2214)** Nadia: suppress/boost precedence: compute half-open suppress and boost overlap spans, union each action's spans independently, assign all boost union duration to boost_overlap_ms, and subtract the duration of the suppress/boost intersection from suppression_overlap_ms; boost therefore wins intersection time. This supersedes LOG-1921.
 
 ### Review entry 0274 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0274. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-south expired 40 stale batches and left 331 governing ones (ticket LOG-8273); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0275 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0275. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Tomas confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8274); 338 batches were written to the retry queue.
 
 ### Review entry 0276 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0276. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8275); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0277 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0277. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 1288ms residual into the next span and decayed the prior idle to zero (ticket LOG-8276); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0278 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0278. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 52 degrade segments during the us-west rollout (ticket LOG-8277); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0279 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0279. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 55 mixed-type values from the eu-central feed (ticket LOG-8278) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0280 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0280. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 373 unplanned batches in ap-south (ticket LOG-8279); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0281 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0281. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 41s over 380 batches (ticket LOG-8280); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0282 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0282. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-northeast expired 4 stale batches and left 387 governing ones (ticket LOG-8281); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0283 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0283. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Marta confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8282); 394 batches were written to the retry queue.
 
 ### Review entry 0284 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0284. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8283); severity counts held across the us-west lanes.
 
 ### Review entry 0285 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0285. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1392ms residual into the next span and decayed the prior idle to zero (ticket LOG-8284); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0286 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0286. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 16 degrade segments during the ap-south rollout (ticket LOG-8285); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0287 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0287. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 19 mixed-type values from the sa-east feed (ticket LOG-8286) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0288 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0288. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 29 unplanned batches in ap-northeast (ticket LOG-8287); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0289 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0289. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 73s over 36 batches (ticket LOG-8288); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0290 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0290. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in us-west expired 28 stale batches and left 43 governing ones (ticket LOG-8289); the pruned set reconciled against the sink with no dangling offsets.
 > **Change-review decision (2026-05-07 - LOG-2216)** Priya: attenuation chain: `billable_duration_ms` = max(duration_ms - maintenance_overlap_ms, 0); `adjusted_billable_duration_ms` = max(billable_duration_ms - (handoff_overlap_ms // 2), 0); `routed_billable_duration_ms` = max(adjusted_billable_duration_ms - (blackout_overlap_ms // 3), 0); `dispatchable_billable_duration_ms` = max(routed_billable_duration_ms - (degrade_overlap_ms // 4), 0). The 2/3/4 divisors are final and revise LOG-2102. This supersedes LOG-1924.
 
 ### Review entry 0291 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0291. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Priya confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8290); 50 batches were written to the retry queue.
 
 ### Review entry 0292 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0292. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8291); severity counts held across the ap-south lanes.
 
 ### Review entry 0293 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0293. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 1496ms residual into the next span and decayed the prior idle to zero (ticket LOG-8292); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0294 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0294. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 40 degrade segments during the ap-northeast rollout (ticket LOG-8293); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0295 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0295. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 43 mixed-type values from the us-east feed (ticket LOG-8294) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0296 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0296. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 85 unplanned batches in us-west (ticket LOG-8295); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0297 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0297. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 15s over 92 batches (ticket LOG-8296); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0298 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0298. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-south expired 52 stale batches and left 99 governing ones (ticket LOG-8297); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0299 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0299. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Ilya confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8298); 106 batches were written to the retry queue.
 
 ### Review entry 0300 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0300. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8299); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0301 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0301. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1600ms residual into the next span and decayed the prior idle to zero (ticket LOG-8300); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0302 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0302. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 4 degrade segments during the us-west rollout (ticket LOG-8301); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0303 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0303. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 7 mixed-type values from the eu-central feed (ticket LOG-8302) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0304 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0304. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 141 unplanned batches in ap-south (ticket LOG-8303); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0305 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0305. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 47s over 148 batches (ticket LOG-8304); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0306 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0306. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-northeast expired 16 stale batches and left 155 governing ones (ticket LOG-8305); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0307 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0307. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Nadia confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8306); 162 batches were written to the retry queue.
 > **Change-review decision (2026-05-07 - LOG-2217)** Priya: field dependency review: billable_duration_ms depends only on duration_ms and maintenance_overlap_ms suppression_overlap_ms and boost_overlap_ms are tracked separately and do not directly change billable_duration_ms adjusted_billable_duration_ms depends only on billable_duration_ms and handoff_overlap_ms routed_billable_duration_ms depends only on adjusted_billable_duration_ms and blackout_overlap_ms dispatchable_billable_duration_ms depends only on routed_billable_duration_ms and degrade_overlap_ms.
 
 ### Review entry 0308 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0308. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8307); severity counts held across the us-west lanes.
 
 ### Review entry 0309 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0309. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 1704ms residual into the next span and decayed the prior idle to zero (ticket LOG-8308); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0310 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0310. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 28 degrade segments during the ap-south rollout (ticket LOG-8309); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0311 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0311. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 31 mixed-type values from the sa-east feed (ticket LOG-8310) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0312 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0312. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 197 unplanned batches in ap-northeast (ticket LOG-8311); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0313 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0313. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 79s over 204 batches (ticket LOG-8312); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0314 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0314. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in us-west expired 40 stale batches and left 211 governing ones (ticket LOG-8313); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0315 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0315. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Rao confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8314); 218 batches were written to the retry queue.
 
 ### Review entry 0316 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0316. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8315); severity counts held across the ap-south lanes.
 
 ### Review entry 0317 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0317. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1808ms residual into the next span and decayed the prior idle to zero (ticket LOG-8316); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0318 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0318. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 52 degrade segments during the ap-northeast rollout (ticket LOG-8317); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0319 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0319. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 55 mixed-type values from the us-east feed (ticket LOG-8318) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0320 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0320. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 253 unplanned batches in us-west (ticket LOG-8319); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0321 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0321. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 21s over 260 batches (ticket LOG-8320); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0322 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0322. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-south expired 4 stale batches and left 267 governing ones (ticket LOG-8321); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0323 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0323. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Dana confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8322); 274 batches were written to the retry queue.
 
 ### Review entry 0324 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0324. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8323); severity counts held across the ap-northeast lanes.
 > **Change-review decision (2026-05-08 - LOG-2219)** Marta: debt ledger: state is independent per normalized service; process each service's merged windows in start_ms ascending order after all attenuation fields are finalized. First window: idle_gap_ms=0, debt_in_ms=0. `idle_gap_ms`: for later windows max(current.start_ms-previous.end_ms,0). `debt_in_ms` = max(previous.debt_out_ms-(idle_gap_ms//3),0). `debt_adjusted_dispatchable_ms` = dispatchable_billable_duration_ms + (debt_in_ms//5). `debt_out_ms` = min(debt_in_ms + dispatchable_billable_duration_ms + handoff_segment_count*20 + blackout_segment_count*25 + degrade_segment_count*15, 2500). finalize debt_out_ms for one window before evaluating the next window in the same service. The one-third idle decay, the 2500 cap, and the 20/25/15 segment credits are final and revise LOG-2106. This supersedes LOG-1928.
 
 ### Review entry 0325 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0325. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 1912ms residual into the next span and decayed the prior idle to zero (ticket LOG-8324); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0326 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0326. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 16 degrade segments during the us-west rollout (ticket LOG-8325); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0327 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0327. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 19 mixed-type values from the eu-central feed (ticket LOG-8326) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0328 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0328. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 309 unplanned batches in ap-south (ticket LOG-8327); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0329 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0329. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 53s over 316 batches (ticket LOG-8328); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0330 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0330. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-northeast expired 28 stale batches and left 323 governing ones (ticket LOG-8329); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0331 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0331. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Tomas confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8330); 330 batches were written to the retry queue.
 
 ### Review entry 0332 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0332. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8331); severity counts held across the us-west lanes.
 
 ### Review entry 0333 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0333. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 2016ms residual into the next span and decayed the prior idle to zero (ticket LOG-8332); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0334 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0334. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 40 degrade segments during the ap-south rollout (ticket LOG-8333); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0335 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0335. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 43 mixed-type values from the sa-east feed (ticket LOG-8334) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0336 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0336. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 365 unplanned batches in ap-northeast (ticket LOG-8335); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0337 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0337. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 85s over 372 batches (ticket LOG-8336); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0338 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0338. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in us-west expired 52 stale batches and left 379 governing ones (ticket LOG-8337); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0339 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0339. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Marta confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8338); 386 batches were written to the retry queue.
 
 ### Review entry 0340 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0340. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8339); severity counts held across the ap-south lanes.
 
 ### Review entry 0341 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0341. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 2120ms residual into the next span and decayed the prior idle to zero (ticket LOG-8340); the sa-east handoff segments reconciled cleanly.
 > **Change-review decision (2026-05-09 - LOG-2221)** Nadia: approved policy baseline (integers, defaults for every field): `queue_min_effective_ms` = 234; `critical_p1_min_ms` = 280; `critical_threshold_ms` = 650; `high_threshold_ms` = 320; `no_overlap_high_duration_ms` = 450; `critical_count_for_critical` = 2; `no_overlap_bonus` = 4; `segment_bonus` = 1; `score_threshold_critical` = 38; `score_threshold_high` = 24; `suppress_penalty_ms` = 40; `boost_credit_ms` = 30; `suppress_unit_ms` = 50; `boost_unit_ms` = 50; `min_queue_floor_ms` = 120; `boost_force_critical_ms` = 140; `boost_high_relief_ms` = 40; `handoff_penalty_ms` = 35; `handoff_unit_ms` = 60; `handoff_force_critical_ms` = 59; `handoff_high_relief_ms` = 50; `blackout_penalty_ms` = 45; `blackout_unit_ms` = 70; `blackout_force_critical_ms` = 200; `blackout_high_relief_ms` = 55; `degrade_penalty_ms` = 30; `degrade_unit_ms` = 80; `degrade_force_critical_ms` = 170; `degrade_high_relief_ms` = 45. Severity weights default to critical=5, major=3, minor=1.
 
 ### Review entry 0342 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0342. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 4 degrade segments during the ap-northeast rollout (ticket LOG-8341); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0343 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0343. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 7 mixed-type values from the us-east feed (ticket LOG-8342) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0344 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0344. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 21 unplanned batches in us-west (ticket LOG-8343); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0345 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0345. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 27s over 28 batches (ticket LOG-8344); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0346 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0346. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-south expired 16 stale batches and left 35 governing ones (ticket LOG-8345); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0347 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0347. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Priya confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8346); 42 batches were written to the retry queue.
 
 ### Review entry 0348 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0348. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8347); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0349 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0349. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 2224ms residual into the next span and decayed the prior idle to zero (ticket LOG-8348); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0350 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0350. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 28 degrade segments during the us-west rollout (ticket LOG-8349); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0351 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0351. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 31 mixed-type values from the eu-central feed (ticket LOG-8350) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0352 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0352. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 77 unplanned batches in ap-south (ticket LOG-8351); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0353 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0353. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 59s over 84 batches (ticket LOG-8352); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0354 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0354. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-northeast expired 40 stale batches and left 91 governing ones (ticket LOG-8353); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0355 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0355. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Ilya confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8354); 98 batches were written to the retry queue.
 
 ### Review entry 0356 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0356. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8355); severity counts held across the us-west lanes.
 
 ### Review entry 0357 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0357. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 2328ms residual into the next span and decayed the prior idle to zero (ticket LOG-8356); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0358 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0358. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 52 degrade segments during the ap-south rollout (ticket LOG-8357); touching intervals compacted and the queue ordering was unchanged.
 > **Change-review decision (2026-05-09 - LOG-2222)** Nadia: policy file resolution: normalize the source default object by starting from policies.defaults and replacing each present integer field after int coercion with fallback 0; merge severity_weight by replacing only present critical/major/minor entries. Overrides: resolve every service profile to a complete policy: start from the normalized default profile, apply the matching service_overrides[canonical_service] fields, and merge a partial severity_weight map by key; omitted fields must remain available and must never raise KeyError. Sparse sources: the default object and every service override may omit any field; all omitted fields fall back through the complete defaults above.
 
 ### Review entry 0359 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0359. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 55 mixed-type values from the sa-east feed (ticket LOG-8358) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0360 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0360. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 133 unplanned batches in ap-northeast (ticket LOG-8359); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0361 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0361. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 1s over 140 batches (ticket LOG-8360); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0362 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0362. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in us-west expired 4 stale batches and left 147 governing ones (ticket LOG-8361); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0363 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0363. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Nadia confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8362); 154 batches were written to the retry queue.
 
 ### Review entry 0364 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0364. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8363); severity counts held across the ap-south lanes.
 
 ### Review entry 0365 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0365. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 2432ms residual into the next span and decayed the prior idle to zero (ticket LOG-8364); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0366 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0366. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 16 degrade segments during the ap-northeast rollout (ticket LOG-8365); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0367 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0367. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 19 mixed-type values from the us-east feed (ticket LOG-8366) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0368 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0368. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 189 unplanned batches in us-west (ticket LOG-8367); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0369 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0369. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 33s over 196 batches (ticket LOG-8368); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0370 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0370. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-south expired 28 stale batches and left 203 governing ones (ticket LOG-8369); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0371 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0371. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Rao confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8370); 210 batches were written to the retry queue.
 
 ### Review entry 0372 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0372. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8371); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0373 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0373. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 136ms residual into the next span and decayed the prior idle to zero (ticket LOG-8372); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0374 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0374. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 40 degrade segments during the us-west rollout (ticket LOG-8373); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0375 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0375. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 43 mixed-type values from the eu-central feed (ticket LOG-8374) and held them out of window construction while keeping them in the canonical count.
 > **Change-review decision (2026-05-10 - LOG-2224)** Ilya: unit conversions: `suppress_units` = 0 when suppression_overlap_ms == 0 else ceil(suppression_overlap_ms / max(suppress_unit_ms, 1)); `boost_units` = boost_overlap_ms // max(boost_unit_ms, 1); `handoff_units` = handoff_overlap_ms // max(handoff_unit_ms, 1); `blackout_units` = blackout_overlap_ms // max(blackout_unit_ms, 1); `degrade_units` = degrade_overlap_ms // max(degrade_unit_ms, 1). Note suppress rounds up; every other unit rounds down — this revises the all-floor rule in LOG-2110.
 
 ### Review entry 0376 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0376. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 245 unplanned batches in ap-south (ticket LOG-8375); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0377 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0377. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 65s over 252 batches (ticket LOG-8376); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0378 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0378. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-northeast expired 52 stale batches and left 259 governing ones (ticket LOG-8377); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0379 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0379. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Dana confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8378); 266 batches were written to the retry queue.
 
 ### Review entry 0380 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0380. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8379); severity counts held across the us-west lanes.
 
 ### Review entry 0381 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0381. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 240ms residual into the next span and decayed the prior idle to zero (ticket LOG-8380); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0382 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0382. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 4 degrade segments during the ap-south rollout (ticket LOG-8381); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0383 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0383. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 7 mixed-type values from the sa-east feed (ticket LOG-8382) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0384 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0384. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 301 unplanned batches in ap-northeast (ticket LOG-8383); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0385 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0385. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 7s over 308 batches (ticket LOG-8384); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0386 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0386. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in us-west expired 16 stale batches and left 315 governing ones (ticket LOG-8385); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0387 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0387. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Tomas confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8386); 322 batches were written to the retry queue.
 
 ### Review entry 0388 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0388. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8387); severity counts held across the ap-south lanes.
 
 ### Review entry 0389 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0389. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 344ms residual into the next span and decayed the prior idle to zero (ticket LOG-8388); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0390 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0390. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 28 degrade segments during the ap-northeast rollout (ticket LOG-8389); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0391 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0391. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 31 mixed-type values from the us-east feed (ticket LOG-8390) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0392 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0392. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 357 unplanned batches in us-west (ticket LOG-8391); per-severity intervals merged without changing downstream scoring.
 > **Change-review decision (2026-05-10 - LOG-2225)** Ilya: queue admission thresholds build in four steps: `effective_queue_min_ms` = max(queue_min_effective_ms + suppress_units*suppress_penalty_ms - boost_units*boost_credit_ms, min_queue_floor_ms); `adjusted_queue_min_ms` = effective_queue_min_ms + handoff_units*handoff_penalty_ms; `routed_queue_min_ms` = adjusted_queue_min_ms + blackout_units*blackout_penalty_ms; `dispatch_queue_min_ms` = routed_queue_min_ms + degrade_units*degrade_penalty_ms. A window enters the queue only when debt_adjusted_dispatchable_ms >= dispatch_queue_min_ms — the full four-step chain is final and revises LOG-2114.
 
 ### Review entry 0393 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0393. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 39s over 364 batches (ticket LOG-8392); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0394 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0394. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-south expired 40 stale batches and left 371 governing ones (ticket LOG-8393); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0395 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0395. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Marta confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8394); 378 batches were written to the retry queue.
 
 ### Review entry 0396 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0396. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8395); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0397 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0397. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 448ms residual into the next span and decayed the prior idle to zero (ticket LOG-8396); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0398 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0398. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 52 degrade segments during the us-west rollout (ticket LOG-8397); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0399 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0399. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 55 mixed-type values from the eu-central feed (ticket LOG-8398) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0400 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0400. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 413 unplanned batches in ap-south (ticket LOG-8399); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0401 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0401. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 71s over 20 batches (ticket LOG-8400); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0402 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0402. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-northeast expired 4 stale batches and left 27 governing ones (ticket LOG-8401); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0403 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0403. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Priya confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8402); 34 batches were written to the retry queue.
 
 ### Review entry 0404 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0404. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8403); severity counts held across the us-west lanes.
 
 ### Review entry 0405 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0405. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 552ms residual into the next span and decayed the prior idle to zero (ticket LOG-8404); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0406 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0406. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 16 degrade segments during the ap-south rollout (ticket LOG-8405); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0407 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0407. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 19 mixed-type values from the sa-east feed (ticket LOG-8406) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0408 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0408. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 69 unplanned batches in ap-northeast (ticket LOG-8407); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0409 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0409. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 13s over 76 batches (ticket LOG-8408); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 > **Change-review decision (2026-05-11 - LOG-2227)** Marta: pressure probes and scores: `exception_balance_score` = boost_units - suppress_units. Handoff probe [end_ms-180, end_ms+1), blackout probe [end_ms-240, end_ms+1), degrade probe [end_ms-210, end_ms+1). `handoff_pressure_score` = (all_probe_ms // 30) + (severity_probe_ms // 20) + handoff_segment_count; `blackout_pressure_score` = (all_probe_ms // 36) + (severity_probe_ms // 24) + blackout_segment_count; `degrade_pressure_score` = (all_probe_ms // 34) + (severity_probe_ms // 23) + degrade_segment_count; `debt_pressure_score` = (debt_out_ms // 80) + (debt_in_ms // 120).
 
 ### Review entry 0410 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0410. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in us-west expired 28 stale batches and left 83 governing ones (ticket LOG-8409); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0411 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0411. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Ilya confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8410); 90 batches were written to the retry queue.
 
 ### Review entry 0412 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0412. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8411); severity counts held across the ap-south lanes.
 
 ### Review entry 0413 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0413. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 656ms residual into the next span and decayed the prior idle to zero (ticket LOG-8412); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0414 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0414. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 40 degrade segments during the ap-northeast rollout (ticket LOG-8413); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0415 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0415. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 43 mixed-type values from the us-east feed (ticket LOG-8414) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0416 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0416. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 125 unplanned batches in us-west (ticket LOG-8415); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0417 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0417. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 45s over 132 batches (ticket LOG-8416); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0418 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0418. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-south expired 52 stale batches and left 139 governing ones (ticket LOG-8417); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0419 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0419. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Nadia confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8418); 146 batches were written to the retry queue.
 
 ### Review entry 0420 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0420. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8419); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0421 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0421. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 760ms residual into the next span and decayed the prior idle to zero (ticket LOG-8420); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0422 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0422. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 4 degrade segments during the us-west rollout (ticket LOG-8421); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0423 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0423. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 7 mixed-type values from the eu-central feed (ticket LOG-8422) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0424 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0424. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 181 unplanned batches in ap-south (ticket LOG-8423); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0425 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0425. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 77s over 188 batches (ticket LOG-8424); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0426 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0426. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-northeast expired 16 stale batches and left 195 governing ones (ticket LOG-8425); the pruned set reconciled against the sink with no dangling offsets.
 > **Change-review decision (2026-05-11 - LOG-2228)** Marta: `escalation_score` = (debt_adjusted_dispatchable_ms // 60) + batch_count*2 + critical_batch_count*3 + (maintenance_overlap_ms==0 ? no_overlap_bonus : 0) + maintenance_span_count*segment_bonus + severity_weight[max_severity] + exception_balance_score*2 + handoff_pressure_score*2 + blackout_pressure_score*2 + debt_pressure_score*2. `risk_vector` = escalation_score + blackout_pressure_score + (degrade_pressure_score * 2) + debt_pressure_score.
 
 ### Review entry 0427 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0427. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Rao confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8426); 202 batches were written to the retry queue.
 
 ### Review entry 0428 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0428. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8427); severity counts held across the us-west lanes.
 
 ### Review entry 0429 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0429. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 864ms residual into the next span and decayed the prior idle to zero (ticket LOG-8428); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0430 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0430. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 28 degrade segments during the ap-south rollout (ticket LOG-8429); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0431 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0431. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 31 mixed-type values from the sa-east feed (ticket LOG-8430) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0432 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0432. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 237 unplanned batches in ap-northeast (ticket LOG-8431); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0433 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0433. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 19s over 244 batches (ticket LOG-8432); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0434 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0434. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in us-west expired 40 stale batches and left 251 governing ones (ticket LOG-8433); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0435 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0435. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Dana confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8434); 258 batches were written to the retry queue.
 
 ### Review entry 0436 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0436. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8435); severity counts held across the ap-south lanes.
 
 ### Review entry 0437 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0437. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 968ms residual into the next span and decayed the prior idle to zero (ticket LOG-8436); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0438 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0438. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 52 degrade segments during the ap-northeast rollout (ticket LOG-8437); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0439 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0439. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 55 mixed-type values from the us-east feed (ticket LOG-8438) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0440 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0440. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 293 unplanned batches in us-west (ticket LOG-8439); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0441 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0441. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 51s over 300 batches (ticket LOG-8440); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0442 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0442. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-south expired 4 stale batches and left 307 governing ones (ticket LOG-8441); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0443 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0443. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Tomas confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8442); 314 batches were written to the retry queue.
 > **Change-review decision (2026-05-12 - LOG-2230)** Nadia: a window is priority critical when ANY of the following holds: max_severity == critical and debt_adjusted_dispatchable_ms >= critical_p1_min_ms; OR debt_adjusted_dispatchable_ms >= critical_threshold_ms; OR critical_batch_count >= critical_count_for_critical; OR escalation_score >= score_threshold_critical; OR boost_overlap_ms >= boost_force_critical_ms; OR handoff_overlap_ms >= handoff_force_critical_ms; OR blackout_overlap_ms >= blackout_force_critical_ms; OR degrade_overlap_ms >= degrade_force_critical_ms; OR debt_out_ms >= 900; OR risk_vector >= score_threshold_critical + 4.
 
 ### Review entry 0444 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0444. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8443); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0445 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0445. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1072ms residual into the next span and decayed the prior idle to zero (ticket LOG-8444); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0446 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0446. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 16 degrade segments during the us-west rollout (ticket LOG-8445); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0447 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0447. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 19 mixed-type values from the eu-central feed (ticket LOG-8446) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0448 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0448. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 349 unplanned batches in ap-south (ticket LOG-8447); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0449 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0449. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 83s over 356 batches (ticket LOG-8448); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0450 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0450. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-northeast expired 28 stale batches and left 363 governing ones (ticket LOG-8449); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0451 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0451. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Marta confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8450); 370 batches were written to the retry queue.
 
 ### Review entry 0452 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0452. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8451); severity counts held across the us-west lanes.
 
 ### Review entry 0453 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0453. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 1176ms residual into the next span and decayed the prior idle to zero (ticket LOG-8452); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0454 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0454. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 40 degrade segments during the ap-south rollout (ticket LOG-8453); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0455 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0455. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 43 mixed-type values from the sa-east feed (ticket LOG-8454) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0456 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0456. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 405 unplanned batches in ap-northeast (ticket LOG-8455); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0457 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0457. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 25s over 412 batches (ticket LOG-8456); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0458 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0458. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in us-west expired 52 stale batches and left 419 governing ones (ticket LOG-8457); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0459 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0459. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Priya confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8458); 26 batches were written to the retry queue.
 
 ### Review entry 0460 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0460. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8459); severity counts held across the ap-south lanes.
 > **Change-review decision (2026-05-12 - LOG-2231)** Nadia: when not critical, a window is priority high when ANY of the following holds: debt_adjusted_dispatchable_ms >= high_threshold_ms; OR batch_count >= 3 and max_severity in {major, critical}; OR maintenance_overlap_ms == 0 and duration_ms >= no_overlap_high_duration_ms; OR escalation_score >= score_threshold_high; OR exception_balance_score > 0 and debt_adjusted_dispatchable_ms >= max(high_threshold_ms - boost_high_relief_ms, 0); OR handoff_pressure_score > 0 and debt_adjusted_dispatchable_ms >= max(high_threshold_ms - handoff_high_relief_ms, 0); OR blackout_pressure_score > 0 and debt_adjusted_dispatchable_ms >= max(high_threshold_ms - blackout_high_relief_ms, 0); OR degrade_pressure_score > 0 and debt_adjusted_dispatchable_ms >= max(high_threshold_ms - degrade_high_relief_ms, 0); OR debt_pressure_score > 0 and debt_adjusted_dispatchable_ms >= max(high_threshold_ms - 35, 0); OR risk_vector >= score_threshold_high + 2. Otherwise priority falls back to medium.
 
 ### Review entry 0461 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0461. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1280ms residual into the next span and decayed the prior idle to zero (ticket LOG-8460); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0462 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0462. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 4 degrade segments during the ap-northeast rollout (ticket LOG-8461); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0463 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0463. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 7 mixed-type values from the us-east feed (ticket LOG-8462) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0464 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0464. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 61 unplanned batches in us-west (ticket LOG-8463); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0465 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0465. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 57s over 68 batches (ticket LOG-8464); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0466 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0466. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-south expired 16 stale batches and left 75 governing ones (ticket LOG-8465); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0467 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0467. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Ilya confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8466); 82 batches were written to the retry queue.
 
 ### Review entry 0468 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0468. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8467); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0469 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0469. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 1384ms residual into the next span and decayed the prior idle to zero (ticket LOG-8468); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0470 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0470. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 28 degrade segments during the us-west rollout (ticket LOG-8469); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0471 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0471. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 31 mixed-type values from the eu-central feed (ticket LOG-8470) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0472 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0472. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 117 unplanned batches in ap-south (ticket LOG-8471); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0473 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0473. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 89s over 124 batches (ticket LOG-8472); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0474 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0474. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-northeast expired 40 stale batches and left 131 governing ones (ticket LOG-8473); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0475 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0475. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Nadia confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8474); 138 batches were written to the retry queue.
 
 ### Review entry 0476 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0476. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8475); severity counts held across the us-west lanes.
 
 ### Review entry 0477 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0477. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1488ms residual into the next span and decayed the prior idle to zero (ticket LOG-8476); the eu-central handoff segments reconciled cleanly.
 > **Change-review decision (2026-05-13 - LOG-2233)** Ilya: final queue ordering, applied strictly in sequence — this full 16-key order is final and revises the coarse 3-key ordering in LOG-2116: priority (critical > high > medium); then escalation_score desc; then handoff_pressure_score desc; then blackout_pressure_score desc; then degrade_pressure_score desc; then debt_pressure_score desc; then risk_vector desc; then exception_balance_score desc; then dispatchable_billable_duration_ms desc; then routed_billable_duration_ms desc; then adjusted_billable_duration_ms desc; then critical_batch_count desc; then maintenance_span_count desc; then batch_count desc; then service asc; then start_ms asc.
 
 ### Review entry 0478 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0478. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 52 degrade segments during the ap-south rollout (ticket LOG-8477); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0479 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0479. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 55 mixed-type values from the sa-east feed (ticket LOG-8478) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0480 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0480. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 173 unplanned batches in ap-northeast (ticket LOG-8479); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0481 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0481. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 31s over 180 batches (ticket LOG-8480); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0482 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0482. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in us-west expired 4 stale batches and left 187 governing ones (ticket LOG-8481); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0483 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0483. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Rao confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8482); 194 batches were written to the retry queue.
 
 ### Review entry 0484 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0484. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8483); severity counts held across the ap-south lanes.
 
 ### Review entry 0485 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0485. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 1592ms residual into the next span and decayed the prior idle to zero (ticket LOG-8484); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0486 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0486. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 16 degrade segments during the ap-northeast rollout (ticket LOG-8485); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0487 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0487. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 19 mixed-type values from the us-east feed (ticket LOG-8486) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0488 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0488. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 229 unplanned batches in us-west (ticket LOG-8487); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0489 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0489. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 63s over 236 batches (ticket LOG-8488); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0490 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0490. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in ap-south expired 28 stale batches and left 243 governing ones (ticket LOG-8489); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0491 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0491. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Dana confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8490); 250 batches were written to the retry queue.
 > **Change-review decision (2026-05-16 - LOG-2236)** Marta: closing the extended-quiet thread from the 0491 review — proportional decay leaves stale debt on the books when a service goes quiet for a long stretch, so the ledger now resets outright past a threshold: when `idle_gap_ms` is 600 or greater, `debt_in_ms` is 0 for that window instead of `max(previous.debt_out_ms - (idle_gap_ms // 3), 0)`. Below 600 the one-third decay stands exactly as written. This reset revises LOG-2219; the 2500 cap and the 20/25/15 segment credits there are unaffected.
 
 ### Review entry 0492 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0492. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8491); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0493 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0493. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1696ms residual into the next span and decayed the prior idle to zero (ticket LOG-8492); the us-east handoff segments reconciled cleanly.
 > **Change-review decision (2026-05-18 - LOG-2251)** Marta: the maintenance-window review closed on this lane with one ledger change — a window that overlapped planned maintenance still leaves residual responder debt, and carrying nothing for it understated the next window's position. Each maintenance span now carries a credit alongside the existing ones: `debt_out_ms = min(debt_in_ms + dispatchable_billable_duration_ms + maintenance_span_count*12 + handoff_segment_count*20 + blackout_segment_count*25 + degrade_segment_count*15, 2500)`. The 12-point maintenance credit revises LOG-2219; the 20/25/15 credits, the one-third idle decay and the 2500 cap recorded there are unchanged, as is the extended-idle reset in LOG-2236.
 
 ### Review entry 0494 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0494. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 40 degrade segments during the us-west rollout (ticket LOG-8493); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0495 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0495. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on tls-audit coerced 43 mixed-type values from the eu-central feed (ticket LOG-8494) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0496 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0496. Rotation swap requested and approved; no change to escalation policy parameters.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cdn-flush applied the grace interval across 285 unplanned batches in ap-south (ticket LOG-8495); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0497 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0497. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for ingest-relay finished in 5s over 292 batches (ticket LOG-8496); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0498 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0498. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on edge-shipper in ap-northeast expired 52 stale batches and left 299 governing ones (ticket LOG-8497); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0499 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0499. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Tomas confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8498); 306 batches were written to the retry queue.
 
 ### Review entry 0500 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0500. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on metrics-bus folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8499); severity counts held across the us-west lanes.
 
 ### Review entry 0501 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0501. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for audit-stream carried 1800ms residual into the next span and decayed the prior idle to zero (ticket LOG-8500); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0502 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0502. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on object-drain absorbed 4 degrade segments during the ap-south rollout (ticket LOG-8501); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0503 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0503. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Planned-flag normalization on replica-feed coerced 7 mixed-type values from the sa-east feed (ticket LOG-8502) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0504 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0504. Vendor paging webhook retried twice before delivery; within contractual retry budget.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Lag-window stitching for cold-store applied the grace interval across 341 unplanned batches in ap-northeast (ticket LOG-8503); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0505 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0505. Synthetic batch injection verified pager delivery for secondary responders in this region.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Log shipment for gateway-tap finished in 37s over 348 batches (ticket LOG-8504); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0506 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0506. Rotation swap requested and approved; no change to escalation policy parameters.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Retention sweep on batch-writer in us-west expired 16 stale batches and left 355 governing ones (ticket LOG-8505); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0507 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0507. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
-Thread archived; see the CAB decision log entries for anything affecting compile behavior.
+Operator Marta confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8506); 362 batches were written to the retry queue.
 
 ### Review entry 0508 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0508. Noise review: duplicate page storm traced to a flapping health check, muted at the source.
-Historical CSV escalation exports remain archived and non-authoritative for the JSON compile acceptance.
+Duplicate-batch audit on warehouse-load folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8507); severity counts held across the ap-south lanes.
 
 ### Review entry 0509 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0509. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Debt-ledger review for dns-log carried 1904ms residual into the next span and decayed the prior idle to zero (ticket LOG-8508); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0510 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0510. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Blackout window on queue-drain absorbed 28 degrade segments during the ap-northeast rollout (ticket LOG-8509); touching intervals compacted and the queue ordering was unchanged.
 
 
 ## Communications Retro — Rollout Incident (filed 2026-05-29)
@@ -2144,75 +2144,75 @@ The comms retro examined how decisions traveled during the rollout batch, becaus
 
 ### Review entry 0511 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0511. Quarterly access recertification for the routing dashboards closed with one dormant reviewer account disabled; no service principals were touched. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Historical CSV exports remain archived and non-authoritative for the JSON compiler acceptance.
+Planned-flag normalization on tls-audit coerced 31 mixed-type values from the us-east feed (ticket LOG-8510) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0512 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0512. A typo fix in the contract reference doc was merged; reviewers confirmed it altered prose only, not any key set.
-Thread archived; see the CAB decision entries for anything affecting compile behavior.
+Lag-window stitching for cdn-flush applied the grace interval across 397 unplanned batches in us-west (ticket LOG-8511); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0513 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0513. The ops channel piloted a weekly digest of CAB decisions; the pilot continues through quarter end.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Log shipment for ingest-relay finished in 69s over 404 batches (ticket LOG-8512); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0514 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0514. The board reconfirmed that lane-local experiments must not write to the shared evidence store. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-Filed for context only; the authoritative record for compile behavior stays with the CAB tickets.
+Retention sweep on edge-shipper in ap-south expired 40 stale batches and left 411 governing ones (ticket LOG-8513); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0515 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0515. Capacity review noted batch-record volume trending up week over week; the board declined to adjust anything outside the CAB process.
-Nothing in this window altered thresholds, priority, or ordering; those remain governed by the ticketed decisions.
+Operator Priya confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8514); 418 batches were written to the retry queue.
 
 ### Review entry 0516 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0516. An audit pass matched queue artifacts against their recorded signatures; no mismatches were observed.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Duplicate-batch audit on metrics-bus folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8515); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0517 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0517. Two junior reviewers completed shadowing rotations and joined the secondary review pool. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Historical CSV exports remain archived and non-authoritative for the JSON compiler acceptance.
+Debt-ledger review for audit-stream carried 2008ms residual into the next span and decayed the prior idle to zero (ticket LOG-8516); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0518 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0518. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Thread archived; see the CAB decision entries for anything affecting compile behavior.
+Blackout window on object-drain absorbed 52 degrade segments during the us-west rollout (ticket LOG-8517); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0519 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0519. Backlog grooming closed five informational tickets referencing the pre-rollout compiler; none carried behavior decisions.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Planned-flag normalization on replica-feed coerced 55 mixed-type values from the eu-central feed (ticket LOG-8518) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0520 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0520. A staleness monitor was tuned to stop double-paging when a dashboard refresh overlaps a deploy. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-Filed for context only; the authoritative record for compile behavior stays with the CAB tickets.
+Lag-window stitching for cold-store applied the grace interval across 53 unplanned batches in ap-south (ticket LOG-8519); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0521 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0521. Change-window grooming returned three stale exception approvals to their owners for re-justification before the next cycle.
-Nothing in this window altered thresholds, priority, or ordering; those remain governed by the ticketed decisions.
+Log shipment for gateway-tap finished in 11s over 60 batches (ticket LOG-8520); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0522 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0522. A drill prep note asked lanes to verify their escalation trees before the Q2 exercise; four lanes confirmed same day.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Retention sweep on batch-writer in ap-northeast expired 4 stale batches and left 67 governing ones (ticket LOG-8521); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0523 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0523. The drill scribe rotated per the roster; minutes were filed the same business day. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Historical CSV exports remain archived and non-authoritative for the JSON compiler acceptance.
+Operator Ilya confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8522); 74 batches were written to the retry queue.
 
 ### Review entry 0524 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0524. A status-page webhook flapped once during the window; the retry queue absorbed it and no routing decision was involved.
-Thread archived; see the CAB decision entries for anything affecting compile behavior.
+Duplicate-batch audit on warehouse-load folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8523); severity counts held across the us-west lanes.
 
 ### Review entry 0525 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0525. Pager noise stayed within the SLO; the single page during the window was acknowledged inside four minutes.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Debt-ledger review for dns-log carried 2112ms residual into the next span and decayed the prior idle to zero (ticket LOG-8524); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0526 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0526. A stale wiki bookmark still pointed at deprecated compiler notes; the link was retired. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-Filed for context only; the authoritative record for compile behavior stays with the CAB tickets.
+Blackout window on queue-drain absorbed 16 degrade segments during the ap-south rollout (ticket LOG-8525); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0527 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0527. The on-call handoff template gained a checklist row for confirming the responder dashboard is live before accepting the rotation.
-Nothing in this window altered thresholds, priority, or ordering; those remain governed by the ticketed decisions.
+Planned-flag normalization on tls-audit coerced 19 mixed-type values from the sa-east feed (ticket LOG-8526) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0528 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0528. The dashboard TLS certificate was rotated ahead of expiry; tiles rendered stale for one refresh and recovered without intervention.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Lag-window stitching for cdn-flush applied the grace interval across 109 unplanned batches in ap-northeast (ticket LOG-8527); per-severity intervals merged without changing downstream scoring.
 
 
 ## Q2 Tabletop Exercise — Minutes (2026-06-04)
@@ -2225,75 +2225,75 @@ The quarterly tabletop walked the batch-to-responder path end to end with the co
 
 ### Review entry 0529 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0529. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Historical CSV exports remain archived and non-authoritative for the JSON compiler acceptance.
+Log shipment for ingest-relay finished in 43s over 116 batches (ticket LOG-8528); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0530 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0530. Metrics ingest lagged for nine minutes during the collector restart; window math was unaffected because the compiler reads recorded batch times, not ingest times.
-Thread archived; see the CAB decision entries for anything affecting compile behavior.
+Retention sweep on edge-shipper in us-west expired 28 stale batches and left 123 governing ones (ticket LOG-8529); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0531 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0531. Retention sampling of archived queue artifacts passed spot audit; one bundle was re-indexed for slow retrieval.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Operator Nadia confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8530); 130 batches were written to the retry queue.
 
 ### Review entry 0532 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0532. A reviewer flagged two chat excerpts that contradicted a ticketed decision; the thread was annotated to point at the ticket as authoritative. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-Filed for context only; the authoritative record for compile behavior stays with the CAB tickets.
+Duplicate-batch audit on metrics-bus folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8531); severity counts held across the ap-south lanes.
 
 ### Review entry 0533 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0533. Quarterly access recertification for the routing dashboards closed with one dormant reviewer account disabled; no service principals were touched.
-Nothing in this window altered thresholds, priority, or ordering; those remain governed by the ticketed decisions.
+Debt-ledger review for audit-stream carried 2216ms residual into the next span and decayed the prior idle to zero (ticket LOG-8532); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0534 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0534. A typo fix in the contract reference doc was merged; reviewers confirmed it altered prose only, not any key set.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Blackout window on object-drain absorbed 40 degrade segments during the ap-northeast rollout (ticket LOG-8533); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0535 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0535. The ops channel piloted a weekly digest of CAB decisions; the pilot continues through quarter end. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Historical CSV exports remain archived and non-authoritative for the JSON compiler acceptance.
+Planned-flag normalization on replica-feed coerced 43 mixed-type values from the us-east feed (ticket LOG-8534) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0536 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0536. The board reconfirmed that lane-local experiments must not write to the shared evidence store.
-Thread archived; see the CAB decision entries for anything affecting compile behavior.
+Lag-window stitching for cold-store applied the grace interval across 165 unplanned batches in us-west (ticket LOG-8535); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0537 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0537. Capacity review noted batch-record volume trending up week over week; the board declined to adjust anything outside the CAB process.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Log shipment for gateway-tap finished in 75s over 172 batches (ticket LOG-8536); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0538 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0538. An audit pass matched queue artifacts against their recorded signatures; no mismatches were observed. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-Filed for context only; the authoritative record for compile behavior stays with the CAB tickets.
+Retention sweep on batch-writer in ap-south expired 52 stale batches and left 179 governing ones (ticket LOG-8537); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0539 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0539. Two junior reviewers completed shadowing rotations and joined the secondary review pool.
-Nothing in this window altered thresholds, priority, or ordering; those remain governed by the ticketed decisions.
+Operator Rao confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8538); 186 batches were written to the retry queue.
 
 ### Review entry 0540 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0540. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Duplicate-batch audit on warehouse-load folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8539); severity counts held across the ap-northeast lanes.
 
 ### Review entry 0541 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0541. Backlog grooming closed five informational tickets referencing the pre-rollout compiler; none carried behavior decisions. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Historical CSV exports remain archived and non-authoritative for the JSON compiler acceptance.
+Debt-ledger review for dns-log carried 2320ms residual into the next span and decayed the prior idle to zero (ticket LOG-8540); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0542 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0542. A staleness monitor was tuned to stop double-paging when a dashboard refresh overlaps a deploy.
-Thread archived; see the CAB decision entries for anything affecting compile behavior.
+Blackout window on queue-drain absorbed 4 degrade segments during the us-west rollout (ticket LOG-8541); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0543 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0543. Change-window grooming returned three stale exception approvals to their owners for re-justification before the next cycle.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Planned-flag normalization on tls-audit coerced 7 mixed-type values from the eu-central feed (ticket LOG-8542) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0544 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0544. A drill prep note asked lanes to verify their escalation trees before the Q2 exercise; four lanes confirmed same day. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-Filed for context only; the authoritative record for compile behavior stays with the CAB tickets.
+Lag-window stitching for cdn-flush applied the grace interval across 221 unplanned batches in ap-south (ticket LOG-8543); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0545 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0545. The drill scribe rotated per the roster; minutes were filed the same business day.
-Nothing in this window altered thresholds, priority, or ordering; those remain governed by the ticketed decisions.
+Log shipment for ingest-relay finished in 17s over 228 batches (ticket LOG-8544); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0546 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0546. A status-page webhook flapped once during the window; the retry queue absorbed it and no routing decision was involved.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Retention sweep on edge-shipper in ap-northeast expired 16 stale batches and left 235 governing ones (ticket LOG-8545); the pruned set reconciled against the sink with no dangling offsets.
 
 
 ## Access Review Appendix — 2026-06 Cycle
@@ -2305,145 +2305,145 @@ The June access review covered every principal with write access to the routing 
 
 ### Review entry 0547 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0547. Pager noise stayed within the SLO; the single page during the window was acknowledged inside four minutes. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Historical CSV exports remain archived and non-authoritative for the JSON compiler acceptance.
+Operator Dana confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8546); 242 batches were written to the retry queue.
 
 ### Review entry 0548 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0548. A stale wiki bookmark still pointed at deprecated compiler notes; the link was retired.
-Thread archived; see the CAB decision entries for anything affecting compile behavior.
+Duplicate-batch audit on metrics-bus folded 22 alias rows into their canonical group under the current tie-break (ticket LOG-8547); severity counts held across the us-west lanes.
 
 ### Review entry 0549 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0549. The on-call handoff template gained a checklist row for confirming the responder dashboard is live before accepting the rotation.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Debt-ledger review for audit-stream carried 2424ms residual into the next span and decayed the prior idle to zero (ticket LOG-8548); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0550 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0550. The dashboard TLS certificate was rotated ahead of expiry; tiles rendered stale for one refresh and recovered without intervention. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-Filed for context only; the authoritative record for compile behavior stays with the CAB tickets.
+Blackout window on object-drain absorbed 28 degrade segments during the ap-south rollout (ticket LOG-8549); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0551 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0551. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-Nothing in this window altered thresholds, priority, or ordering; those remain governed by the ticketed decisions.
+Planned-flag normalization on replica-feed coerced 31 mixed-type values from the sa-east feed (ticket LOG-8550) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0552 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0552. Metrics ingest lagged for nine minutes during the collector restart; window math was unaffected because the compiler reads recorded batch times, not ingest times.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Lag-window stitching for cold-store applied the grace interval across 277 unplanned batches in ap-northeast (ticket LOG-8551); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0553 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0553. Retention sampling of archived queue artifacts passed spot audit; one bundle was re-indexed for slow retrieval. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Historical CSV exports remain archived and non-authoritative for the JSON compiler acceptance.
+Log shipment for gateway-tap finished in 49s over 284 batches (ticket LOG-8552); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0554 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0554. A reviewer flagged two chat excerpts that contradicted a ticketed decision; the thread was annotated to point at the ticket as authoritative.
-Thread archived; see the CAB decision entries for anything affecting compile behavior.
+Retention sweep on batch-writer in us-west expired 40 stale batches and left 291 governing ones (ticket LOG-8553); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0555 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0555. Quarterly access recertification for the routing dashboards closed with one dormant reviewer account disabled; no service principals were touched.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Operator Tomas confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8554); 298 batches were written to the retry queue.
 
 ### Review entry 0556 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0556. A typo fix in the contract reference doc was merged; reviewers confirmed it altered prose only, not any key set. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-Filed for context only; the authoritative record for compile behavior stays with the CAB tickets.
+Duplicate-batch audit on warehouse-load folded 46 alias rows into their canonical group under the current tie-break (ticket LOG-8555); severity counts held across the ap-south lanes.
 
 ### Review entry 0557 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0557. The ops channel piloted a weekly digest of CAB decisions; the pilot continues through quarter end.
-Nothing in this window altered thresholds, priority, or ordering; those remain governed by the ticketed decisions.
+Debt-ledger review for dns-log carried 128ms residual into the next span and decayed the prior idle to zero (ticket LOG-8556); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0558 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0558. The board reconfirmed that lane-local experiments must not write to the shared evidence store.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Blackout window on queue-drain absorbed 52 degrade segments during the ap-northeast rollout (ticket LOG-8557); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0559 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0559. Capacity review noted batch-record volume trending up week over week; the board declined to adjust anything outside the CAB process. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Historical CSV exports remain archived and non-authoritative for the JSON compiler acceptance.
+Planned-flag normalization on tls-audit coerced 55 mixed-type values from the us-east feed (ticket LOG-8558) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0560 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0560. An audit pass matched queue artifacts against their recorded signatures; no mismatches were observed.
-Thread archived; see the CAB decision entries for anything affecting compile behavior.
+Lag-window stitching for cdn-flush applied the grace interval across 333 unplanned batches in us-west (ticket LOG-8559); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0561 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0561. Two junior reviewers completed shadowing rotations and joined the secondary review pool.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Log shipment for ingest-relay finished in 81s over 340 batches (ticket LOG-8560); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0562 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0562. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-Filed for context only; the authoritative record for compile behavior stays with the CAB tickets.
+Retention sweep on edge-shipper in ap-south expired 4 stale batches and left 347 governing ones (ticket LOG-8561); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0563 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0563. Backlog grooming closed five informational tickets referencing the pre-rollout compiler; none carried behavior decisions.
-Nothing in this window altered thresholds, priority, or ordering; those remain governed by the ticketed decisions.
+Operator Marta confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8562); 354 batches were written to the retry queue.
 
 ### Review entry 0564 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0564. A staleness monitor was tuned to stop double-paging when a dashboard refresh overlaps a deploy.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Duplicate-batch audit on metrics-bus folded 10 alias rows into their canonical group under the current tie-break (ticket LOG-8563); severity counts held across the ap-northeast lanes.
 
 
 ### Review entry 0565 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0565. Change-window grooming returned three stale exception approvals to their owners for re-justification before the next cycle. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Historical CSV exports remain archived and non-authoritative for the JSON compiler acceptance.
+Debt-ledger review for audit-stream carried 232ms residual into the next span and decayed the prior idle to zero (ticket LOG-8564); the us-east handoff segments reconciled cleanly.
 
 ### Review entry 0566 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0566. A drill prep note asked lanes to verify their escalation trees before the Q2 exercise; four lanes confirmed same day.
-Thread archived; see the CAB decision entries for anything affecting compile behavior.
+Blackout window on object-drain absorbed 16 degrade segments during the us-west rollout (ticket LOG-8565); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0567 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0567. The drill scribe rotated per the roster; minutes were filed the same business day.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Planned-flag normalization on replica-feed coerced 19 mixed-type values from the eu-central feed (ticket LOG-8566) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0568 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0568. A status-page webhook flapped once during the window; the retry queue absorbed it and no routing decision was involved. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-Filed for context only; the authoritative record for compile behavior stays with the CAB tickets.
+Lag-window stitching for cold-store applied the grace interval across 389 unplanned batches in ap-south (ticket LOG-8567); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0569 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0569. Pager noise stayed within the SLO; the single page during the window was acknowledged inside four minutes.
-Nothing in this window altered thresholds, priority, or ordering; those remain governed by the ticketed decisions.
+Log shipment for gateway-tap finished in 23s over 396 batches (ticket LOG-8568); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0570 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0570. A stale wiki bookmark still pointed at deprecated compiler notes; the link was retired.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Retention sweep on batch-writer in ap-northeast expired 28 stale batches and left 403 governing ones (ticket LOG-8569); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0571 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0571. The on-call handoff template gained a checklist row for confirming the responder dashboard is live before accepting the rotation. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Historical CSV exports remain archived and non-authoritative for the JSON compiler acceptance.
+Operator Priya confirmed the index-lag cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8570); 410 batches were written to the retry queue.
 
 ### Review entry 0572 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0572. The dashboard TLS certificate was rotated ahead of expiry; tiles rendered stale for one refresh and recovered without intervention.
-Thread archived; see the CAB decision entries for anything affecting compile behavior.
+Duplicate-batch audit on warehouse-load folded 34 alias rows into their canonical group under the current tie-break (ticket LOG-8571); severity counts held across the us-west lanes.
 
 ### Review entry 0573 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0573. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Debt-ledger review for dns-log carried 336ms residual into the next span and decayed the prior idle to zero (ticket LOG-8572); the eu-central handoff segments reconciled cleanly.
 
 ### Review entry 0574 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0574. Metrics ingest lagged for nine minutes during the collector restart; window math was unaffected because the compiler reads recorded batch times, not ingest times. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-Filed for context only; the authoritative record for compile behavior stays with the CAB tickets.
+Blackout window on queue-drain absorbed 40 degrade segments during the ap-south rollout (ticket LOG-8573); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0575 — auth lane
 Shift lead logged routine rollout observation for auth (east) during review window 0575. Retention sampling of archived queue artifacts passed spot audit; one bundle was re-indexed for slow retrieval.
-Nothing in this window altered thresholds, priority, or ordering; those remain governed by the ticketed decisions.
+Planned-flag normalization on tls-audit coerced 43 mixed-type values from the sa-east feed (ticket LOG-8574) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0576 — billing lane
 Shift lead logged routine rollout observation for billing (west) during review window 0576. A reviewer flagged two chat excerpts that contradicted a ticketed decision; the thread was annotated to point at the ticket as authoritative.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Lag-window stitching for cdn-flush applied the grace interval across 45 unplanned batches in ap-northeast (ticket LOG-8575); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0577 — checkout lane
 Shift lead logged routine rollout observation for checkout (central) during review window 0577. Quarterly access recertification for the routing dashboards closed with one dormant reviewer account disabled; no service principals were touched. The wrapper-script drill completed inside its budget; the runbook timing stands with no change requested.
-Historical CSV exports remain archived and non-authoritative for the JSON compiler acceptance.
+Log shipment for ingest-relay finished in 55s over 52 batches (ticket LOG-8576); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0578 — edge lane
 Shift lead logged routine rollout observation for edge (west) during review window 0578. A typo fix in the contract reference doc was merged; reviewers confirmed it altered prose only, not any key set.
-Thread archived; see the CAB decision entries for anything affecting compile behavior.
+Retention sweep on edge-shipper in us-west expired 52 stale batches and left 59 governing ones (ticket LOG-8577); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0579 — inventory lane
 Shift lead logged routine rollout observation for inventory (east) during review window 0579. The ops channel piloted a weekly digest of CAB decisions; the pilot continues through quarter end.
-No compiler semantics were changed in this entry; parameters remain as approved by the change board.
+Operator Ilya confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8578); 66 batches were written to the retry queue.
 
 ### Review entry 0580 — ledger lane
 Shift lead logged routine rollout observation for ledger (central) during review window 0580. The board reconfirmed that lane-local experiments must not write to the shared evidence store. Log-retention verification confirmed the ninety-day tier is intact; nothing in the compile path reads beyond thirty days.
-Filed for context only; the authoritative record for compile behavior stays with the CAB tickets.
+Duplicate-batch audit on metrics-bus folded 58 alias rows into their canonical group under the current tie-break (ticket LOG-8579); severity counts held across the ap-south lanes.
 
 ### Review entry 0581 — notifications lane
 Shift lead logged routine rollout observation for notifications (north) during review window 0581. Capacity review noted batch-record volume trending up week over week; the board declined to adjust anything outside the CAB process.
-Nothing in this window altered thresholds, priority, or ordering; those remain governed by the ticketed decisions.
+Debt-ledger review for audit-stream carried 440ms residual into the next span and decayed the prior idle to zero (ticket LOG-8580); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0582 — search lane
 Shift lead logged routine rollout observation for search (north) during review window 0582. An audit pass matched queue artifacts against their recorded signatures; no mismatches were observed.
-Reviewers should reconcile behavior questions against the CAB decision entries rather than chat excerpts.
+Blackout window on object-drain absorbed 4 degrade segments during the ap-northeast rollout (ticket LOG-8581); touching intervals compacted and the queue ordering was unchanged.

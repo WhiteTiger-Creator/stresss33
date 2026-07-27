@@ -1420,6 +1420,7 @@ def test_service_account_provisioned():
 
     entry = pwd.getpwnam("svc-logship")
     assert entry.pw_shell in ("/usr/sbin/nologin", "/sbin/nologin", "/bin/false")
+    assert entry.pw_uid < 1000, "svc-logship must be a system account (uid < 1000)"
 
 
 def test_stale_compile_lock_cleared():
@@ -1430,10 +1431,16 @@ def test_stale_compile_lock_cleared():
 def test_wrapper_installed_and_functional(tmp_path_factory):
     """The operator wrapper is executable, targets the live compiler, and runs it."""
     assert WRAPPER_PATH.exists()
-    mode = WRAPPER_PATH.stat().st_mode
-    assert mode & 0o111, "wrapper must be executable"
+    info = WRAPPER_PATH.stat()
+    assert info.st_uid == 0 and info.st_gid == 0, "wrapper must be root-owned"
+    assert (info.st_mode & 0o777) == 0o755, "wrapper must be exactly mode 0755"
+    assert (info.st_mode & 0o6000) == 0, "wrapper must not be setuid/setgid"
     source = WRAPPER_PATH.read_text()
     assert ".legacy" not in source
+    # The wrapper preserves the invoking identity: it never switches user, so the scheduled
+    # run's identity is chosen by the cron drop-in (its user field), not by the wrapper.
+    for tok in ("su ", "sudo", "setpriv", "runuser", "setuid", "chpst", "gosu"):
+        assert tok not in source, f"wrapper must preserve the invoking identity (found {tok!r})"
     out_dir = tmp_path_factory.mktemp("wrapper_out")
     result = subprocess.run(  # noqa: PLW1510
         [str(WRAPPER_PATH), "--input", str(INPUT_PATH), "--output-dir", str(out_dir)],
@@ -1520,9 +1527,23 @@ def test_logrotate_dropin_installed():
     """
     dropin = Path("/etc/logrotate.d/log-shipper")
     assert dropin.exists(), "logrotate drop-in was never installed"
-    assert (dropin.stat().st_mode & 0o777) == 0o644, "logrotate drop-in must be mode 0644"
+    info = dropin.stat()
+    assert info.st_uid == 0 and info.st_gid == 0, "logrotate drop-in must be root-owned"
+    assert (info.st_mode & 0o777) == 0o644, "logrotate drop-in must be mode 0644"
     text = dropin.read_text(encoding="utf-8")
     assert "/var/log/log-shipper/*.log" in text, "drop-in does not cover the compile log glob"
-    for directive in ("daily", "rotate 14", "compress", "missingok", "notifempty",
-                      "su svc-logship svc-logship", "create 0640 svc-logship svc-logship"):
-        assert directive in text, f"logrotate drop-in missing required directive: {directive}"
+    # Exactly the required effective directives inside the block -- no extras that would
+    # change rotation behaviour, and none missing.
+    effective = [
+        line.strip()
+        for line in text.splitlines()
+        if line.strip()
+        and not line.strip().startswith("#")
+        and not line.strip().endswith("{")
+        and line.strip() != "}"
+    ]
+    required = {
+        "daily", "rotate 14", "compress", "missingok", "notifempty",
+        "su svc-logship svc-logship", "create 0640 svc-logship svc-logship",
+    }
+    assert set(effective) == required, f"logrotate must carry only the required directives; got {sorted(effective)}"

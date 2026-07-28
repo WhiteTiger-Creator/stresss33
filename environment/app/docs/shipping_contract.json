@@ -27,7 +27,7 @@
       "policy_queue_min_ms": "equal to selected profile's queue_min_effective_ms before unit penalties/credits",
       "batch_signature": "first 12 lowercase hex chars of sha1(service|start_ms|end_ms|comma_joined_source_batch_ids|window_signature|max_severity|maintenance_span_count|policy_profile|suppression_overlap_ms|boost_overlap_ms|effective_queue_min_ms|adjusted_queue_min_ms|handoff_overlap_ms|handoff_pressure_score|blackout_overlap_ms|blackout_pressure_score|routed_queue_min_ms|degrade_overlap_ms|degrade_pressure_score|dispatch_queue_min_ms|debt_in_ms|debt_out_ms|debt_adjusted_dispatchable_ms|debt_pressure_score|exception_balance_score)",
       "queue_digest": "first 10 lowercase hex chars of sha1(window_id|priority|escalation_score|handoff_pressure_score|blackout_pressure_score|degrade_pressure_score|debt_pressure_score|risk_vector)",
-      "identifier_note": "window_signature, batch_signature and queue_digest are TRUNCATED sha1 hex digests — 10, 12 and 10 lowercase hex characters respectively — NOT full-length hashes. Do not emit a 40-char sha1 or a 64-char sha256 for these fields; truncate to the stated length. This is distinct from the summary checksum fields, which are full 64-char sha256 digests."
+      "identifier_note": "window_signature, batch_signature and queue_digest are TRUNCATED sha1 hex digests \u2014 10, 12 and 10 lowercase hex characters respectively \u2014 NOT full-length hashes. Do not emit a 40-char sha1 or a 64-char sha256 for these fields; truncate to the stated length. This is distinct from the summary checksum fields, which are full 64-char sha256 digests."
     }
   },
   "schemas": {
@@ -261,5 +261,44 @@
   },
   "summary_field_scope": {
     "note": "canonical_batch_count, severity_counts, planned_excluded_count and canonical_input_checksum are computed over all canonical deduplicated batches, including planned ones; service windows and the retry queue are built from unplanned batches only. raw_batch_count and unique_batch_ids are taken from the raw input before canonicalization."
+  },
+  "governing_entry_index": {
+    "_note": "The change-advisory log records both February DRAFT proposals (later reversed) and the 2026-05 CAB DECISIONS that supersede them. To remove the reconciliation burden, these are the final governing LOG decisions \u2014 superseded drafts are excluded. Each still states its own rule; grep the log for the ticket id to read the exact arithmetic. Where two governing decisions still overlap, the later dated one wins. This index is authoritative for WHICH entries govern, not for HOW.",
+    "final_governing_decisions": [
+      "LOG-2201",
+      "LOG-2202",
+      "LOG-2204",
+      "LOG-2205",
+      "LOG-2207",
+      "LOG-2208",
+      "LOG-2210",
+      "LOG-2211",
+      "LOG-2213",
+      "LOG-2214",
+      "LOG-2216",
+      "LOG-2217",
+      "LOG-2219",
+      "LOG-2221",
+      "LOG-2222",
+      "LOG-2224",
+      "LOG-2225",
+      "LOG-2227",
+      "LOG-2228",
+      "LOG-2230",
+      "LOG-2231",
+      "LOG-2233",
+      "LOG-2236",
+      "LOG-2240",
+      "LOG-2242",
+      "LOG-2243",
+      "LOG-2246",
+      "LOG-2248",
+      "LOG-2251",
+      "LOG-2252",
+      "LOG-2254",
+      "LOG-2256",
+      "LOG-2258",
+      "LOG-2262"
+    ]
   }
 }

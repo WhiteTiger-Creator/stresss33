@@ -11,7 +11,6 @@ The initial rollout draft circulated a set of compile-behavior proposals through
 Routine entries are context only. LOG-ticketed proposal and decision quotes embedded in the entries are the authoritative record for compile behavior.
 
 ### Review entry 0001 — billing lane
-Shift lead logged routine rollout observation for billing (west) during review window 0001. Dashboard tiles for responder load lagged during the sync window; attributed to cache refresh, not the compiler.
 Log shipment for ingest-relay finished in 1s over 20 batches (ticket LOG-8000); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0012 — inventory lane
@@ -27,7 +26,6 @@ Log shipment for ingest-relay finished in 1s over 20 batches (ticket LOG-8000); 
 > **Rollout draft proposal (2026-02-16 - LOG-1914)** Tomas: when an batch_id repeats, keep the first row encountered and discard the rest *(Superseded — reversed in the 2026-05 change review; see the matching decision entry.)*
 
 ### Review entry 0049 — billing lane
-Shift lead logged routine rollout observation for billing (west) during review window 0049. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
 Log shipment for ingest-relay finished in 13s over 356 batches (ticket LOG-8048); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0060 — inventory lane
@@ -49,7 +47,6 @@ Log shipment for ingest-relay finished in 13s over 356 batches (ticket LOG-8048)
 > **Rollout draft proposal (2026-02-28 - LOG-1934)** Tomas: queue admission thresholds — compute `effective_queue_min_ms = queue_min_effective_ms + suppress_units*suppress_penalty_ms - boost_units*boost_credit_ms` with no floor at that step, add the handoff, blackout and degrade unit penalties in turn, and apply the `min_queue_floor_ms` floor once at the very end to the final `dispatch_queue_min_ms` *(Superseded — reversed in the 2026-05 change review; see the matching decision entry.)*
 
 ### Review entry 0097 — billing lane
-Shift lead logged routine rollout observation for billing (west) during review window 0097. Quarterly audit sampled acknowledgment records; no compiler-relevant findings for this lane.
 Log shipment for ingest-relay finished in 25s over 292 batches (ticket LOG-8096); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0100 — inventory lane
@@ -115,7 +112,6 @@ Log shipment for ingest-relay finished in 25s over 292 batches (ticket LOG-8096)
 > **Change-review decision (2026-05-02 - LOG-2202)** Ilya: allowed severities are critical, major, minor; anything else (or a missing value) becomes `minor`. Severity rank for comparisons is critical > major > minor.
 
 ### Review entry 0152 — auth lane
-Shift lead logged routine rollout observation for auth (east) during review window 0152. Escalation bridge reviewed stale runbook links; owners pinged to refresh links before the next drill.
 Lag-window stitching for cold-store applied the grace interval across 277 unplanned batches in us-west (ticket LOG-8151); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0154 — search lane
@@ -128,7 +124,6 @@ Lag-window stitching for cold-store applied the grace interval across 277 unplan
 > **Change-review decision (2026-05-04 - LOG-2207)** Marta: duplicate batchs are grouped by `batch_id` and one row is kept per group. Tie-break chain, in order: max end_ms; then max severity rank; then prefer planned == false; then max start_ms; then max service lexicographically. This supersedes LOG-1914.
 
 ### Review entry 0199 — ledger lane
-Shift lead logged routine rollout observation for ledger (central) during review window 0199. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
 Planned-flag normalization on replica-feed coerced 55 mixed-type values from the us-east feed (ticket LOG-8198) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0205 — edge lane
@@ -141,7 +136,6 @@ Planned-flag normalization on replica-feed coerced 55 mixed-type values from the
 > **Change-review decision (2026-05-05 - LOG-2211)** Ilya: routing domains apply in the fixed order maintenance -> exceptions -> handoff -> blackout -> degrade. Exception actions are limited to suppress and boost; severity scopes are all, major, critical.
 
 ### Review entry 0246 — notifications lane
-Shift lead logged routine rollout observation for notifications (north) during review window 0246. Rotation swap requested and approved; no change to escalation policy parameters.
 Blackout window on object-drain absorbed 16 degrade segments during the ap-northeast rollout (ticket LOG-8245); touching intervals compacted and the queue ordering was unchanged.
 
 ### Review entry 0256 — auth lane
@@ -154,7 +148,6 @@ Blackout window on object-drain absorbed 16 degrade segments during the ap-north
 > **Change-review decision (2026-05-07 - LOG-2216)** Priya: attenuation chain: `billable_duration_ms` = max(duration_ms - maintenance_overlap_ms, 0); `adjusted_billable_duration_ms` = max(billable_duration_ms - (handoff_overlap_ms divided by 2 rounding down), 0); `routed_billable_duration_ms` = max(adjusted_billable_duration_ms - (blackout_overlap_ms divided by 3 rounding down), 0); `dispatchable_billable_duration_ms` = max(routed_billable_duration_ms - (degrade_overlap_ms divided by 4 rounding down), 0). The 2/3/4 divisors are final and revise LOG-2102. This supersedes LOG-1924.
 
 ### Review entry 0293 — edge lane
-Shift lead logged routine rollout observation for edge (west) during review window 0293. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
 Debt-ledger review for audit-stream carried 1496ms residual into the next span and decayed the prior idle to zero (ticket LOG-8292); the sa-east handoff segments reconciled cleanly.
 
 ### Review entry 0307 — checkout lane
@@ -164,7 +157,6 @@ Debt-ledger review for audit-stream carried 1496ms residual into the next span a
 > **Change-review decision (2026-05-08 - LOG-2219)** Marta: debt ledger: state is independent per normalized service; process each service's merged windows in start_ms ascending order after all attenuation fields are finalized. First window: idle_gap_ms=0, debt_in_ms=0. `idle_gap_ms`: for later windows max(current.start_ms-previous.end_ms,0). `debt_in_ms` = max(previous.debt_out_ms-(idle_gap_ms divided by 3 rounding down),0). `debt_adjusted_dispatchable_ms` = dispatchable_billable_duration_ms + (debt_in_ms divided by 5 rounding down). `debt_out_ms` = min(debt_in_ms + dispatchable_billable_duration_ms + handoff_segment_count*20 + blackout_segment_count*25 + degrade_segment_count*15, 2500). finalize debt_out_ms for one window before evaluating the next window in the same service. The one-third idle decay, the 2500 cap, and the 20/25/15 segment credits are final and revise LOG-2106. This supersedes LOG-1928.
 
 ### Review entry 0339 — checkout lane
-Shift lead logged routine rollout observation for checkout (central) during review window 0339. Capacity review noted rising page volume; no threshold changes approved outside the CAB process.
 Operator Marta confirmed the archive-sink cron drop-in fired under svc-logship and rotated its log with no privilege drop (ticket LOG-8338); 386 batches were written to the retry queue.
 
 ### Review entry 0341 — edge lane
@@ -177,7 +169,6 @@ Operator Marta confirmed the archive-sink cron drop-in fired under svc-logship a
 > **Change-review decision (2026-05-10 - LOG-2224)** Ilya: unit conversions: `suppress_units` is 0 when the suppression overlap is 0, otherwise the suppression overlap divided by the suppress unit size (treated as at least 1), rounding up. `boost_units`, `handoff_units`, `blackout_units` and `degrade_units` are each the corresponding overlap divided by that domain's unit size (treated as at least 1), rounding down. Note suppress rounds up; every other unit rounds down — this revises the all-floor rule in LOG-2110.
 
 ### Review entry 0386 — search lane
-Shift lead logged routine rollout observation for search (north) during review window 0386. Rotation swap requested and approved; no change to escalation policy parameters.
 Retention sweep on edge-shipper in us-west expired 16 stale batches and left 315 governing ones (ticket LOG-8385); the pruned set reconciled against the sink with no dangling offsets.
 
 ### Review entry 0392 — auth lane
@@ -190,7 +181,6 @@ Retention sweep on edge-shipper in us-west expired 16 stale batches and left 315
 > **Change-review decision (2026-05-11 - LOG-2228)** Marta: `escalation_score` = (debt_adjusted_dispatchable_ms divided by 60 rounding down) + batch_count*2 + critical_batch_count*3 + (maintenance_overlap_ms==0 ? no_overlap_bonus : 0) + maintenance_span_count*segment_bonus + severity_weight[max_severity] + exception_balance_score*2 + handoff_pressure_score*2 + blackout_pressure_score*2 + debt_pressure_score*2. `risk_vector` = escalation_score + blackout_pressure_score + (degrade_pressure_score * 2) + debt_pressure_score.
 
 ### Review entry 0433 — billing lane
-Shift lead logged routine rollout observation for billing (west) during review window 0433. On-call handoff rehearsal ran clean; no gaps observed in the rotation calendar for this lane.
 Log shipment for ingest-relay finished in 19s over 244 batches (ticket LOG-8432); the manifest checksum matched the prior generation and no lag windows were re-stitched.
 
 ### Review entry 0443 — checkout lane
@@ -203,7 +193,6 @@ Log shipment for ingest-relay finished in 19s over 244 batches (ticket LOG-8432)
 > **Change-review decision (2026-05-13 - LOG-2233)** Ilya: final queue ordering, applied strictly in sequence — this full 16-key order is final and revises the coarse 3-key ordering in LOG-2116: priority (critical > high > medium); then escalation_score desc; then handoff_pressure_score desc; then blackout_pressure_score desc; then degrade_pressure_score desc; then debt_pressure_score desc; then risk_vector desc; then exception_balance_score desc; then dispatchable_billable_duration_ms desc; then routed_billable_duration_ms desc; then adjusted_billable_duration_ms desc; then critical_batch_count desc; then maintenance_span_count desc; then batch_count desc; then service asc; then start_ms asc.
 
 ### Review entry 0480 — auth lane
-Shift lead logged routine rollout observation for auth (east) during review window 0480. Paging drill completed within SLO; acknowledgment latency p95 held under the rollout target.
 Lag-window stitching for cdn-flush applied the grace interval across 173 unplanned batches in ap-northeast (ticket LOG-8479); per-severity intervals merged without changing downstream scoring.
 
 ### Review entry 0491 — checkout lane
@@ -217,13 +206,11 @@ Lag-window stitching for cdn-flush applied the grace interval across 173 unplann
 > **Change-review decision (2026-05-28 - LOG-2243)** Marta: artifact bundles must record output signatures at export time and again at archive ingest; a mismatch quarantines the bundle for manual review. Evidence handling only; artifact contents are unaffected.
 
 ### Review entry 0527 — auth lane
-Shift lead logged routine rollout observation for auth (east) during review window 0527. The on-call handoff template gained a checklist row for confirming the responder dashboard is live before accepting the rotation.
 Planned-flag normalization on tls-audit coerced 19 mixed-type values from the sa-east feed (ticket LOG-8526) and held them out of window construction while keeping them in the canonical count.
 
 ### Review entry 0528 — billing lane
 > **Change-review decision (2026-06-03 - LOG-2262)** Dana: quarterly access recertification for the routing path samples service-to-service grants at twice the standard rate through year end. Access policy; no compiler impact.
 > **Change-review decision (2026-05-30 - LOG-2264)** Marta: degrade probe rounding, and the rounding map of record. The SEVERITY-scoped half of the degrade probe now ROUNDS UP (ceiling) while the all-scoped half keeps its floor: `degrade_pressure_score = (degrade_all_probe_ms divided by 34 rounding down) + degrade_severity_probe_ms divided by 23 rounding up + degrade_segment_count`. This revises the floored `degrade_severity_probe_ms divided by 23 rounding down` written in LOG-2227, which is superseded on this point only: the probe range [end_ms-210, end_ms+1), the divisors 34 and 23, the all-scoped floor and the segment term are unchanged. This entry also supersedes LOG-2250 as the rounding map of record: rounding remains NON-uniform and no divisor's direction may be inferred from any other, but the degrade probe no longer stays floored on both halves — only the handoff probe does. Read each divisor's direction from its own governing decision.
-
 
 ### Review entry 0546 — edge lane
 > **Change-review decision (2026-06-06 - LOG-2249)** Ilya: the weekly CAB digest becomes a standing publication with a superseded-by column. Communications practice only; the ticketed decisions remain the sole authority on compile behavior.

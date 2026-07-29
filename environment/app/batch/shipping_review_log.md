@@ -249,3 +249,11 @@ Window `[200, 500)`. Compacted `(service, all)` interval `[180, 240)`; compacted
 
 ### E. Which queue value the batch_signature carries (see `shipping_contract.json` batch_signature payload)
 The signature payload carries `effective_queue_min_ms` — the profile's `queue_min_effective_ms` after the suppress/boost **unit** penalties and credits — then `adjusted_queue_min_ms`, then (after the handoff and blackout unit penalties) `routed_queue_min_ms`, then `dispatch_queue_min_ms`. It does **not** carry `policy_queue_min_ms` (the pre-penalty profile value), even though that value is also emitted as its own row field. Read the exact field list and order from the contract's `batch_signature` payload string.
+
+### F. Probe pressure scores round PER HALF, and the three families do not agree (LOG-2227, as revised by LOG-2246 and LOG-2264)
+Each pressure score adds an all-scoped probe term, a severity-scoped probe term, and the domain's segment count. The divisors and, critically, the ROUNDING DIRECTION of each half are per-domain — read them from the governing decision, never by analogy to another family. The all-scoped half is FLOORED in all three families; the severity-scoped half is FLOORED for handoff but ROUNDS UP for blackout and degrade.
+Inputs (already-computed probe overlaps, in ms): handoff `all=65, severity=45, handoff_segment_count=1`; blackout `all=80, severity=50, blackout_segment_count=2`; degrade `all=70, severity=47, degrade_segment_count=0`.
+- `handoff_pressure_score  = floor(65/30) + floor(45/20) + 1 = 2 + 2 + 1 = 5`   — BOTH halves **FLOOR** (LOG-2227; handoff is the one family left floored on both halves, per LOG-2264's map)
+- `blackout_pressure_score = floor(80/36) + ceil(50/24)  + 2 = 2 + 3 + 2 = 7`   — all-scoped **FLOOR**, severity-scoped **ROUNDS UP** (LOG-2246); note `ceil(50/24)=3`, a floor would have given 2
+- `degrade_pressure_score  = floor(70/34) + ceil(47/23)  + 0 = 2 + 3 + 0 = 5`   — all-scoped **FLOOR**, severity-scoped **ROUNDS UP** (LOG-2264); note `ceil(47/23)=3`, a floor would have given 2
+The probe overlaps themselves come from the half-open probe ranges in LOG-2227 (handoff `[end_ms-180, end_ms+1)`, blackout `[end_ms-240, end_ms+1)`, degrade `[end_ms-210, end_ms+1)`) measured against the compacted intervals — the same union-then-measure method as example D.

@@ -13,13 +13,13 @@ Operations invokes the compiler only through `/usr/local/bin/ship-logs`:
 - mode `0755`, owned by root
 - forwards all arguments to `python3 /app/workflow/log_ship.py`
 - runs the compiler **as the invoking user**: the wrapper must not switch user, `su`, `sudo`, `setpriv`, `setuid`, or otherwise drop privileges — selecting the `svc-logship` identity is the cron drop-in's job, not the wrapper's. Invoked directly (e.g. by an operator or in a check), the wrapper runs the compiler as whoever ran it.
-- concurrency guard: when the lock file `/var/lock/log-shipper.lock` exists, the wrapper must exit with status `75` (EX_TEMPFAIL) without invoking the compiler or writing any output
+- concurrency guard: when the lock file `/var/lock/log-shipper.lock` exists, the wrapper must exit with status `75` (EX_TEMPFAIL) without invoking the compiler or writing any output. The lock path is **exactly** `/var/lock/log-shipper.lock` — not a variant such as `log-shipper.compile.lock` or one derived from the log file name; the wrapper checks and honours that one path.
 
 Stale locks left behind by crashed runs are removed during recovery, not worked around.
 
 ## Schedule
 
-The compile is scheduled through a cron drop-in at `/etc/cron.d/log-shipper`, mode `0644`, containing exactly this job line:
+The compile is scheduled through a cron drop-in at `/etc/cron.d/log-shipper`, mode `0644`, containing exactly this job line and nothing more — the line ends at `/app/output`, with **no** appended output redirection (no ` >> …`, no ` 2>&1`, no `MAILTO`), and no trailing comment:
 
 ```
 */5 * * * * svc-logship /usr/local/bin/ship-logs --input /app/data/batches.json --output-dir /app/output
